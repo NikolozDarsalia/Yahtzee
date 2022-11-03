@@ -28,6 +28,19 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private void playGame() {
 		/* You fill this in */
 	}
+	
+	
+	private void try() {
+		int[] dices = new int[5];
+		for(int n = 1; n <= dices.length; n++) {
+			int value = rgen.nextInt(ONES, SIXES);
+			dices[n-1] = value;
+		}
+		
+		display.displayDice(dices);
+		
+	}
+	
 		
 /* Private instance variables */
 	private int nPlayers;
