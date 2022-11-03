@@ -27,7 +27,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	private void playGame() {
 		/* You fill this in */
-		tries();
+
 	}
 	
 	
@@ -41,8 +41,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	
-	private int[] tries() {
-		int[] dices = new int[5];
+	private int[] firstTry() {
+		int[] dices = new int[N_DICE];
 		for(int n = 1; n <= dices.length; n++) {
 			int value = rgen.nextInt(ONES, SIXES);
 			dices[n-1] = value;
@@ -52,5 +52,14 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return dices;
 	}
 	
+	private void changeResults(int[] dices) {
+		display.waitForPlayerToSelectDice();
+		for(int n = 1; n <= dices.length; n++) {
+			if (display.isDieSelected(n)) {
+				
+			}
+		}
+		
+	}
 
 }
