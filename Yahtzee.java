@@ -30,7 +30,17 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	private void try() {
+
+		
+/* Private instance variables */
+	private int nPlayers;
+	private String[] playerNames;
+	private YahtzeeDisplay display;
+	private RandomGenerator rgen = new RandomGenerator();
+	
+	
+	
+	private int[] tries() {
 		int[] dices = new int[5];
 		for(int n = 1; n <= dices.length; n++) {
 			int value = rgen.nextInt(ONES, SIXES);
@@ -38,14 +48,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}
 		
 		display.displayDice(dices);
-		
+		return dices;
 	}
 	
-		
-/* Private instance variables */
-	private int nPlayers;
-	private String[] playerNames;
-	private YahtzeeDisplay display;
-	private RandomGenerator rgen = new RandomGenerator();
 
 }
