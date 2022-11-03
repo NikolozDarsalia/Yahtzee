@@ -27,6 +27,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	private void playGame() {
 		/* You fill this in */
+		tries();
 	}
 	
 	
