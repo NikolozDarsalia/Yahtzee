@@ -90,7 +90,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	private int getScore(int[] dices) {
 		int category = display.waitForPlayerToSelectCategory();
-		upperCategoryScore(dices, category);
+		int score = 0;
+		if(category < UPPER_SCORE) {
+			score = upperCategoryScore(dices, category);
+		}
 		return category;
 	}
 	
