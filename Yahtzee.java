@@ -92,5 +92,15 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		int category = display.waitForPlayerToSelectCategory();
 		return category;
 	}
-
+	
+	
+	private boolean isInUpperCategory(int[] dices, int category) {
+		for(int dice: dices) {
+			if(dice == category) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
 }
