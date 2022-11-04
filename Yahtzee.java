@@ -95,8 +95,20 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			score = upperCategoryScore(dices, category);
 		}else if(category == THREE_OF_A_KIND) {
 			
+		}else if(category == FOUR_OF_A_KIND) {
+			
+		}else if(category == FULL_HOUSE){
+			
+		}else if(category == SMALL_STRAIGHT){
+			
+		}else if(category == LARGE_STRAIGHT){
+			
+		}else if(category == YAHTZEE){
+			
+		}else if(category == CHANCE){
+			
 		}
-		return category;
+		return score;
 	}
 	
 	
