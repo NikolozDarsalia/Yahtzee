@@ -111,5 +111,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return score;
 	}
 	
-	private int 
+	
+	private int threeOfAKind(int[] dices) {
+		
+	}
 }
