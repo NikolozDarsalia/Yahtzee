@@ -169,5 +169,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
+	private int forStraight(int[] dices) {
+		
+	}
+	
 	
 }
