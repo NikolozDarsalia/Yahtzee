@@ -190,5 +190,13 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
+	private int chance(int[] dices) {
+		int score = 0;
+		for(int dice: dices) {
+			score += dice;
+		}
+		return score;
+	}
+	
 	
 }
