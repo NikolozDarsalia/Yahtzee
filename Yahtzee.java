@@ -94,9 +94,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		if(category < UPPER_SCORE) {
 			score = upperCategoryScore(dices, category);
 		}else if(category == THREE_OF_A_KIND) {
-			score = nOfAKinds(dices, 3);
+			score = nOfAKind(dices, 3);
 		}else if(category == FOUR_OF_A_KIND) {
-			score = nOfAKinds(dices, 4);
+			score = nOfAKind(dices, 4);
 		}else if(category == FULL_HOUSE){
 			
 		}else if(category == SMALL_STRAIGHT){
@@ -124,10 +124,12 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	private int nOfAKinds(int[] dices, int n) {
+	private int nOfAKind(int[] dices, int n) {
 		int count = 0;
+		
 		for(int i = 1; i <= dices.length; i++) {
 			for(int x = 1; x <= dices.length; x++) {
+				
 				if(dices[x] == dices[i]) {
 					count ++;
 					if(count == n) {
@@ -135,8 +137,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 					}
 				}
 			}
+			
 			count = 0;
 		}
+		
 		return 0;
 	}
 	
