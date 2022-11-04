@@ -88,5 +88,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
+	private int getScore() {
+		int category = display.waitForPlayerToSelectCategory();
+		return category;
+	}
 
 }
