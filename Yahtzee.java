@@ -144,4 +144,24 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return 0;
 	}
 	
+	
+	private int fullHouse(int[] dices) {
+		int three_of_a_kind = nOfAKind(dices, 3);
+		if(three_of_a_kind == 0) {
+			return 0;
+		}else {
+			int dice_for_3 = three_of_a_kind/3;
+			int dice_for_2 = 0;
+			for(int dice: dices) {
+				if (dice == dice_for_2) {
+					return 25;
+				}else if(dice != dice_for_3) {
+					dice_for_2 = dice;
+				}
+			}
+			
+			return 0;
+		}
+	}
+	
 }
