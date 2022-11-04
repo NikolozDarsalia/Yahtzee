@@ -100,9 +100,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}else if(category == FULL_HOUSE){
 			score = fullHouse(dices);
 		}else if(category == SMALL_STRAIGHT){
-			
+			score = forStraight(dices, 3);
 		}else if(category == LARGE_STRAIGHT){
-			
+			score = forStraight(dices, 4);
 		}else if(category == YAHTZEE){
 			score = nOfAKind(dices, 5);
 		}else if(category == CHANCE){
@@ -128,9 +128,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		int count = 0;
 		
 		for(int i = 1; i <= dices.length-(n+1); i++) {
-			for(int x = 1; x <= dices.length; x++) {
+			for(int x = i; x <= dices.length; x++) {
 				
-				if(dices[x] == dices[i]) {
+				if(dices[x-1] == dices[i-1]) {
 					count ++;
 					if(count == n) {
 						return THREE_OF_A_KIND*dices[i];
@@ -169,20 +169,26 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	private int forStraight(int[] dices) {
+	private int forStraight(int[] dices, int n) {
 		int count = 0;
 		
-		for(int i = 1; i < dices.length; i++) {
-			for(int x = i + 1; x <= dices.length; x++) {
+		for(int i = 1; i <= dices.length; i++) {
+			int prev = dices[i-1];
+			for(int x = 1; x <= dices.length; x++) {
 				
-				if(dices[x] > dices[i]) {
+				if(dices[x-1] > prev) {
 					count ++;
+					prev = dices[x-1];
+					if(count == n) return n*10;
 				}
 	
 			}
 			
 		}
+		
+		return 0;
 	}
+	
 	
 	
 }
