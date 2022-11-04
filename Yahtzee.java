@@ -199,19 +199,25 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return 0;
 	}
 	
+	
 	private int[] sorter(int[] dices) {
-		int[] sorted_dices = new int[N_DICE];
-		
+		int index = 0;
 		for(int i = 1; i < dices.length; i++) {
 			int min = dices[i-1];
 			for(int x = i + 1; x <= dices.length; x++) {
-				if (dices[x-1] < min) min = dices[x-1];
+				if (dices[x-1] <= min) {
+					index = x - 1;
+					min = dices[x-1];
+				}
+				
 			}
-			sorted_dices[i-1] = min;
+			dices[index] = dices[i-1];
+			dices[i-1] = min;
 		}
 		
-		return sorted_dices;
+		return dices;
 	}
+	
 	
 	private int chance(int[] dices) {
 		int score = 0;
