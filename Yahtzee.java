@@ -180,14 +180,15 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	private int forStraight(int[] dices, int n) {
 		int count = 0;
+		int [] sorted_dices = sorter(dices);
 		
-		for(int i = 1; i <= dices.length; i++) {
-			int prev = dices[i-1];
-			for(int x = 1; x <= dices.length; x++) {
+		for(int i = 1; i < sorted_dices.length; i++) {
+			int prev = sorted_dices[i-1];
+			for(int x = i + 1; x <= sorted_dices.length; x++) {
 				
-				if(dices[x-1] > prev) {
+				if(sorted_dices[x-1] - prev == 1) {
 					count ++;
-					prev = dices[x-1];
+					prev = sorted_dices[x-1];
 					if(count == n) return n*10;
 				}
 	
@@ -198,6 +199,19 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return 0;
 	}
 	
+	private int[] sorter(int[] dices) {
+		int[] sorted_dices = new int[N_DICE];
+		
+		for(int i = 1; i < dices.length; i++) {
+			int min = dices[i-1];
+			for(int x = i + 1; x <= dices.length; x++) {
+				if (dices[x-1] < min) min = dices[x-1];
+			}
+			sorted_dices[i-1] = min;
+		}
+		
+		return sorted_dices;
+	}
 	
 	private int chance(int[] dices) {
 		int score = 0;
