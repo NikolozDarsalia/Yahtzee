@@ -93,6 +93,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		int score = 0;
 		if(category < UPPER_SCORE) {
 			score = upperCategoryScore(dices, category);
+		}else if(category == THREE_OF_A_KIND) {
+			
 		}
 		return category;
 	}
@@ -108,4 +110,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		return score;
 	}
+	
+	private int 
 }
