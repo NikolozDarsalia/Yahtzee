@@ -79,6 +79,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return dices;
 	}
 	
+	
 	/* */
 	private void changeResults(int[] dices) {
 		for(int n = 1; n <= dices.length; n++) {
@@ -88,6 +89,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			}
 		}
 	}
+	
 	
 	/* */
 	private boolean hasSelected(int[] dices) {
@@ -100,6 +102,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		return false;
 	}
+	
 	
 	/* */
 	private void addScore(int[] dices, int player, int[][] score_board) {
@@ -120,6 +123,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 	}
 	
+	
 	/* */
 	private int[][] fillScoreBoard(int[][] score_board){
 		for(int player = 1; player <= nPlayers; player++) {
@@ -129,6 +133,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}
 		return score_board;
 	}
+	
 	
 	/* */
 	private boolean gameOver(int[][] score_board) {
@@ -144,6 +149,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		return true;
 	}
+	
 	
 	/* */
 	private void calculateTotal(int[][] score_board) {
@@ -165,6 +171,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 	}
 	
+	
 	/* */
 	private void calculateUpperScore(int[][] score_board) {
 		
@@ -182,6 +189,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			display.updateScorecard(UPPER_SCORE, player, total);
 		}
 	}
+	
 	
 	/* */
 	private void calculateLowerScore(int[][] score_board) {
@@ -202,6 +210,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 	}
 	
+	
 	/* */
 	private void calculateUpperBonus(int[][] score_board) {
 		for(int player = 1; player <= nPlayers; player++) {
@@ -213,6 +222,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
+	/* */
 	private void isWinner(int[][] score_board) {
 		int total_score = 0;
 		int winner = 0;
@@ -225,6 +235,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
 		
 	}
+	
 	
 	/* */
 	private int getScore(int[] dices, int category) {
@@ -250,6 +261,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return score;
 	}
 	
+	
 	/* */
 	private int upperCategoryScore(int[] dices, int category) {
 		int score = 0;
@@ -261,6 +273,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		return score;
 	}
+	
 	
 	/* */
 	private int nOfAKind(int[] dices, int n) {
@@ -282,6 +295,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		return 0;
 	}
+	
 	
 	/* */
 	private int fullHouse(int[] dices) {
@@ -307,6 +321,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}
 	}
 	
+	
 	/* */
 	private int forStraight(int[] dices, int n) {
 		int count = 1;
@@ -329,6 +344,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return 0;
 	}
 	
+	
 	/* */
 	private int[] sorter(int[] dices) {
 		int index = 0;
@@ -347,6 +363,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		return dices;
 	}
+	
 	
 	/* */
 	private int chance(int[] dices) {
