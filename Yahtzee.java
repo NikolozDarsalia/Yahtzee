@@ -25,6 +25,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		playGame();
 	}
 
+	
 	private void playGame() {
 		for(int i = 1; i <= nPlayers; i++) {
 			display.waitForPlayerToClickRoll(i);
@@ -37,6 +38,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 					break;
 				}
 			}
+			fillScoreBoard(score_board);
 			addScore(dices, i);
 			
 		}
@@ -90,13 +92,32 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	private void addScore(int[] dices, int player) {
+		
 		int category = display.waitForPlayerToSelectCategory();
+		while(score_board[player - 1][category - 1] != Integer.MIN_VALUE) {
+			category = display.waitForPlayerToSelectCategory();
+		}
+		
 		int score = getScore(dices, category);
 		
 		display.updateScorecard(category, player, score);
 		score_board[player - 1][category - 1] = score;
 		
-		display.printMessage(playerNames[player-1] + " earns " + score + " Score");
+		display.printMessage(playerNames[player-1] + " earned " + score + " Score");
+	}
+	
+	
+	private int[][] fillScoreBoard(int[][] score_board){
+		for(int i = 1; i <= nPlayers; i ++) {
+			for(int x = 1; x <= N_CATEGORIES; x++) {
+				score_board[i-1][x-1] = Integer.MIN_VALUE;
+			}
+		}
+		return score_board;
+	}
+	
+	private boolean gameOver() {
+		
 	}
 	
 	
