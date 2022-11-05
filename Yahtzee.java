@@ -109,7 +109,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display.updateScorecard(category, player, score);
 		score_board[player - 1][category - 1] = score;
+		
 		calculateTotal(score_board);
+		calculateUpperScore(score_board);
+		calculateLowerScore(score_board);
 		
 		display.printMessage(playerNames[player-1] + " earned " + score + " Score");
 	}
