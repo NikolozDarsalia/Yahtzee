@@ -309,7 +309,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* */
 	private int forStraight(int[] dices, int n) {
-		int count = 0;
+		int count = 1;
 		int [] sorted_dices = sorter(dices);
 		
 		for(int i = 1; i < sorted_dices.length; i++) {
@@ -324,6 +324,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 			}
 			
+			count = 1;
 		}
 		
 		return 0;
