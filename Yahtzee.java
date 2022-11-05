@@ -18,13 +18,16 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		IODialog dialog = getDialog();
 		nPlayers = dialog.readInt("Enter number of players");
 		playerNames = new String[nPlayers];
+		
+		int[][] score_board = new int[nPlayers][N_CATEGORIES];
 		fillScoreBoard(score_board);
 		
 		for (int i = 1; i <= nPlayers; i++) {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
+		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
-		playGame();
+		playGame(score_board);
 	}
 
 	
@@ -35,12 +38,11 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	private int[][] score_board = new int[nPlayers][N_CATEGORIES];
 	
 	
-	private void playGame() {
+	private void playGame(int[][] score_board) {
 		
-		while(!gameOver()) {
+		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
 				display.waitForPlayerToClickRoll(player);
 				int[] dices = firstTry();
@@ -53,7 +55,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 					}
 				}
 
-				addScore(dices, player);
+				addScore(dices, player, score_board);
 			}
 		}
 		
@@ -95,7 +97,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	/* */
-	private void addScore(int[] dices, int player) {
+	private void addScore(int[] dices, int player, int[][] score_board) {
 		
 		int category = display.waitForPlayerToSelectCategory();
 		while(score_board[player - 1][category - 1] != Integer.MIN_VALUE) {
@@ -121,7 +123,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	/* */
-	private boolean gameOver() {
+	private boolean gameOver(int[][] score_board) {
 		for(int i = 1; i <= nPlayers; i++) {
 			for(int x = 1; x <= N_CATEGORIES; x++) {
 				if(x != UPPER_SCORE && x != UPPER_BONUS && x != LOWER_SCORE && x != TOTAL) {
