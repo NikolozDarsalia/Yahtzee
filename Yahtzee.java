@@ -110,7 +110,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	private int[][] fillScoreBoard(int[][] score_board){
-		for(int i = 1; i <= nPlayers; i ++) {
+		for(int i = 1; i <= nPlayers; i++) {
 			for(int x = 1; x <= N_CATEGORIES; x++) {
 				score_board[i-1][x-1] = Integer.MIN_VALUE;
 			}
@@ -120,7 +120,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	private boolean gameOver() {
-		for(int i = 1; i <= nPlayers; i ++) {
+		for(int i = 1; i <= nPlayers; i++) {
 			for(int x = 1; x <= N_CATEGORIES; x++) {
 				if(x != UPPER_SCORE && x != UPPER_BONUS && x != LOWER_SCORE && x != TOTAL) {
 					if(x == Integer.MIN_VALUE) {
