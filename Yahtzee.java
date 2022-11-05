@@ -150,7 +150,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			
 			for(int category = 1; category <= N_CATEGORIES; category++) {
 				
-				if(category != UPPER_SCORE && category != LOWER_SCORE) {
+				if(category != UPPER_SCORE && category != LOWER_SCORE && category != TOTAL) {
 					if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
 						total += score_board[player-1][category-1];
 					}
