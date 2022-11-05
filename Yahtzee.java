@@ -138,7 +138,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return true;
 	}
 	
-	
+	/* */
 	private void calculateTotal(int[][] score_board) {
 		int total = 0;
 		for(int player = 1; player <= nPlayers; player++) {
