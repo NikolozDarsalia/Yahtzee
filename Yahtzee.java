@@ -203,17 +203,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	/* */
 	private void calculateUpperBonus(int[][] score_board) {
 		for(int player = 1; player <= nPlayers; player++) {
-			int total = 0;
-			
-			for(int category = THREE_OF_A_KIND; category < LOWER_SCORE; category++) {
-				
-				if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
-					total += score_board[player-1][category-1];
-				}
-				
+			if(score_board[player][UPPER_SCORE - 1] >= 60) {
+				score_board[player][UPPER_BONUS - 1] = 35;
+				display.updateScorecard(UPPER_BONUS, player, 35);
 			}
-			score_board[player - 1][LOWER_SCORE - 1] = total;
-			display.updateScorecard(LOWER_SCORE, player, total);
 		}
 	}
 	
