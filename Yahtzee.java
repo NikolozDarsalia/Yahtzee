@@ -115,9 +115,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* */
 	private int[][] fillScoreBoard(int[][] score_board){
-		for(int i = 1; i <= score_board.length; i++) {
-			for(int x = 1; x <= score_board[i-1].length; x++) {
-				score_board[i-1][x-1] = Integer.MIN_VALUE;
+		for(int player = 1; player <= nPlayers; player++) {
+			for(int category = 1; category <= N_CATEGORIES; category++) {
+				score_board[player-1][category-1] = Integer.MIN_VALUE;
 			}
 		}
 		return score_board;
@@ -125,10 +125,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* */
 	private boolean gameOver(int[][] score_board) {
-		for(int i = 1; i <= nPlayers; i++) {
-			for(int x = 1; x <= N_CATEGORIES; x++) {
-				if(x != UPPER_SCORE && x != UPPER_BONUS && x != LOWER_SCORE && x != TOTAL) {
-					if(score_board[i-1][x-1] == Integer.MIN_VALUE) {
+		for(int player = 1; player <= nPlayers; player++) {
+			for(int category = 1; category <= N_CATEGORIES; category++) {
+				if(category != UPPER_BONUS) {
+					if(score_board[player-1][category-1] == Integer.MIN_VALUE) {
 						return false;
 					}
 				}
@@ -140,9 +140,12 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* */
 	private void calculateTotal(int[][] score_board) {
-		int total = 0;
+		
 		for(int player = 1; player <= nPlayers; player++) {
+			int total = 0;
+			
 			for(int category = 1; category <= N_CATEGORIES; category++) {
+				
 				if(category != UPPER_SCORE && category != LOWER_SCORE) {
 					if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
 						total += score_board[player-1][category-1];
