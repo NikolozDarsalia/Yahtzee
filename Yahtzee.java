@@ -54,7 +54,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		calculateUpperBonus(score_board);
 		calculateTotal(score_board);
-		
+		isWinner(score_board);
 	}
 	
 	
@@ -210,6 +210,20 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				display.updateScorecard(UPPER_BONUS, player, 35);
 			}
 		}
+	}
+	
+	
+	private void isWinner(int[][] score_board) {
+		int total_score = 0;
+		int winner = 0;
+		for(int player = 1; player <= nPlayers; player++) {
+			if (score_board[player-1][TOTAL-1] > total_score) {
+				total_score = score_board[player-1][TOTAL-1];
+				winner = player;
+			}
+		}
+		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
+		
 	}
 	
 	/* */
