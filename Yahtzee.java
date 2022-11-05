@@ -33,11 +33,11 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	private int[][] score_board = new int[nPlayers][N_CATEGORIES];
+	private int[][] score_board = new int[N_CATEGORIES][nPlayers];
 	
 	
 	private void playGame() {
-//		score_board = fillScoreBoard(score_board);
+		fillScoreBoard(score_board);
 		
 		while(!gameOver()) {
 			for(int player = 1; player <= nPlayers; player++) {
@@ -109,15 +109,15 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		display.printMessage(playerNames[player-1] + " earned " + score + " Score");
 	}
 	
-//	
-//	private int[][] fillScoreBoard(int[][] score_board){
-//		for(int i = 1; i <= score_board.length; i++) {
-//			for(int x = 1; x <= score_board[i-1].length; x++) {
-//				score_board[i-1][x-1] = Integer.MIN_VALUE;
-//			}
-//		}
-//		return score_board;
-//	}
+	
+	private int[][] fillScoreBoard(int[][] score_board){
+		for(int i = 1; i <= score_board.length; i++) {
+			for(int x = 1; x <= score_board[i-1].length; x++) {
+				score_board[i-1][x-1] = Integer.MIN_VALUE;
+			}
+		}
+		return score_board;
+	}
 	
 	
 	private boolean gameOver() {
