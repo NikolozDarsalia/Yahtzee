@@ -320,9 +320,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 					count ++;
 					prev = sorted_dices[x-1];
 					if(count == n) return (n-1)*10;
-				}else
-					break;
-	
+				}
 			}
 			
 			count = 1;
