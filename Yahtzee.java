@@ -205,7 +205,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	/* */
 	private void calculateUpperBonus(int[][] score_board) {
 		for(int player = 1; player <= nPlayers; player++) {
-			if(score_board[player][UPPER_SCORE - 1] >= 60) {
+			if(score_board[player][UPPER_SCORE - 1] >= 63) {
 				score_board[player][UPPER_BONUS - 1] = 35;
 				display.updateScorecard(UPPER_BONUS, player, 35);
 			}
@@ -225,9 +225,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}else if(category == FULL_HOUSE){
 			score = fullHouse(dices);
 		}else if(category == SMALL_STRAIGHT){
-			score = forStraight(dices, 3);
-		}else if(category == LARGE_STRAIGHT){
 			score = forStraight(dices, 4);
+		}else if(category == LARGE_STRAIGHT){
+			score = forStraight(dices, 5);
 		}else if(category == YAHTZEE){
 			if(nOfAKind(dices, 5) != 0) score = 50;
 		}else if(category == CHANCE){
@@ -258,7 +258,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				if(dices[x-1] == dices[i-1]) {
 					count ++;
 					if(count == n) {
-						return (6+n)*dices[i];
+						return dices[i];
 					}
 				}
 			}
