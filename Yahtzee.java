@@ -18,6 +18,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		IODialog dialog = getDialog();
 		nPlayers = dialog.readInt("Enter number of players");
 		playerNames = new String[nPlayers];
+		fillScoreBoard(score_board);
+		
 		for (int i = 1; i <= nPlayers; i++) {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
@@ -37,7 +39,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	private void playGame() {
-		fillScoreBoard(score_board);
 		
 		while(!gameOver()) {
 			for(int player = 1; player <= nPlayers; player++) {
@@ -124,7 +125,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		for(int i = 1; i <= nPlayers; i++) {
 			for(int x = 1; x <= N_CATEGORIES; x++) {
 				if(x != UPPER_SCORE && x != UPPER_BONUS && x != LOWER_SCORE && x != TOTAL) {
-					if(x == Integer.MIN_VALUE) {
+					if(score_board[i-1][x-1] == Integer.MIN_VALUE) {
 						return false;
 					}
 				}
