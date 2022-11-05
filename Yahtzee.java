@@ -50,7 +50,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				addScore(dices, player, score_board);
 			}
 		}
-
+		
+		calculateUpperBonus(score_board);
+		calculateTotal(score_board);
 		
 	}
 	
