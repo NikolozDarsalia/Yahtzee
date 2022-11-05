@@ -113,7 +113,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private int[][] fillScoreBoard(int[][] score_board){
 		for(int i = 1; i <= nPlayers; i++) {
 			for(int x = 1; x <= N_CATEGORIES; x++) {
-				score_board[i-1][x-1] = Integer.MIN_VALUE;
+				score_board[i-1][x-1] = 0;
 			}
 		}
 		return score_board;
