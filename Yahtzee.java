@@ -119,6 +119,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateLowerScore(score_board);
 		
 		display.printMessage(playerNames[player-1] + " earned " + score + " Score");
+		pause(10);
 	}
 	
 	/* */
