@@ -31,7 +31,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 
 	
-	
+	/* */
 	private void playGame(int[][] score_board) {
 		
 		while(!gameOver(score_board)) {
