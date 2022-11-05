@@ -31,14 +31,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 
 	
-
-		
-/* Private instance variables */
-	private int nPlayers;
-	private String[] playerNames;
-	private YahtzeeDisplay display;
-	private RandomGenerator rgen = new RandomGenerator();
-	
 	
 	private void playGame(int[][] score_board) {
 		
@@ -61,6 +53,15 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 	}
 	
+	
+		
+/* Private instance variables */
+	private int nPlayers;
+	private String[] playerNames;
+	private YahtzeeDisplay display;
+	private RandomGenerator rgen = new RandomGenerator();
+	
+
 	
 	/* */
 	private int[] firstTry() {
@@ -137,6 +138,24 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return true;
 	}
 	
+	
+	private void calculateTotal(int[][] score_board) {
+		int total = 0;
+		for(int player = 1; player <= nPlayers; player++) {
+			for(int category = 1; category <= N_CATEGORIES; category++) {
+				if(category != UPPER_SCORE && category != LOWER_SCORE) {
+					if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
+						total += score_board[player-1][category-1];
+					}
+				}
+			}
+			
+			display.updateScorecard(TOTAL, player, total);
+		}
+		
+	}
+	
+	
 	/* */
 	private int getScore(int[] dices, int category) {
 		int score = 0;
@@ -154,7 +173,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}else if(category == LARGE_STRAIGHT){
 			score = forStraight(dices, 4);
 		}else if(category == YAHTZEE){
-			score = nOfAKind(dices, 5);
+			if(nOfAKind(dices, 5) != 0) score = 50;
 		}else if(category == CHANCE){
 			score = chance(dices); 
 		}
@@ -183,7 +202,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				if(dices[x-1] == dices[i-1]) {
 					count ++;
 					if(count == n) {
-						return n*dices[i];
+						return (6+n)*dices[i];
 					}
 				}
 			}
