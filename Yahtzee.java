@@ -136,7 +136,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private int nOfAKind(int[] dices, int n) {
 		int count = 0;
 		
-		for(int i = 1; i <= dices.length-(n+1); i++) {
+		for(int i = 1; i <= dices.length-(n-1); i++) {
 			for(int x = i; x <= dices.length; x++) {
 				
 				if(dices[x-1] == dices[i-1]) {
