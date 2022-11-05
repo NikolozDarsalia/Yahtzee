@@ -27,6 +27,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	
 	private void playGame() {
+		fillScoreBoard(score_board);
+		
 		while(!gameOver()) {
 			for(int i = 1; i <= nPlayers; i++) {
 				display.waitForPlayerToClickRoll(i);
@@ -39,9 +41,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 						break;
 					}
 				}
-				fillScoreBoard(score_board);
+
 				addScore(dices, i);
-				
 			}
 		}
 		
