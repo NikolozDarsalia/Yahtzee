@@ -52,7 +52,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	
+	private int[][] score_board = new int[nPlayers][N_CATEGORIES];
 	
 	
 	private int[] firstTry() {
@@ -92,7 +92,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private void addScore(int[] dices, int player) {
 		int category = display.waitForPlayerToSelectCategory();
 		int score = getScore(dices, category);
+		
 		display.updateScorecard(category, player, score);
+		score_board[player - 1][category - 1] = score;
+		
 		display.printMessage(playerNames[player-1] + " earns " + score + " Score");
 	}
 	
