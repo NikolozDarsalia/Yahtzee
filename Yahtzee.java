@@ -142,7 +142,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				if(dices[x-1] == dices[i-1]) {
 					count ++;
 					if(count == n) {
-						return THREE_OF_A_KIND*dices[i];
+						return n*dices[i];
 					}
 				}
 			}
