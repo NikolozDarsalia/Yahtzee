@@ -327,8 +327,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* Chance is the last category of the game. If the player choose that 
 	 * category, this method will return sum of all five values of dices massive.
-	 * This method is also used in nOfAKind method, for calculate result value,
-	 * in three of a kind or four of a kind cases. 
+	 * This method is also used for three of a kind or four of a kind cases in
+	 * getScore method. 
 	 * */
 	private int chance(int[] dices) {
 		int score = 0;
