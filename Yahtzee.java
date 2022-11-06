@@ -227,7 +227,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				if(dices[x-1] == dices[i-1]) {
 					count ++;
 					if(count == n) {
-						return chance(dices);
+						return dices[x-1];
 					}
 				}
 			}
@@ -240,14 +240,15 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* Full House means that there are only two kinds of values, each of them
-	 * is repeated three times and another two times. */
+	 * is repeated three times and another two times. 
+	 * */
 	private int fullHouse(int[] dices) {
 		int three_of_a_kind = nOfAKind(dices, 3);
 		
 		if(three_of_a_kind == 0) {
 			return 0;
 		}else {
-			int dice_for_3 = three_of_a_kind/3;
+			int dice_for_3 = three_of_a_kind;
 			int dice_for_2 = 0;
 			
 			for(int dice: dices) {
