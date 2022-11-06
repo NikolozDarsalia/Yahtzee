@@ -116,10 +116,16 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* after the final dices will be generated, player needs to select
-	 * category to earn scores. */
+	 * category to earn scores. This method needs 4 arguments - final version of dices 
+	 * massive, player number, category number, and matrix of score's board
+	 * and it checks if the values of dices are appropriate for selected category.
+	 * If answer is positive, player will get score by the logic of specific category,
+	 * in other situation, the score will be 0. 
+	 * Firstly, all the values in score_board matrix are equal to Integer.MIN_VALUE,
+	 * 
+	 * */
 	private void addScore(int[] dices, int player, int category, int[][] score_board) {
-		
-		
+
 		while(score_board[player - 1][category - 1] != Integer.MIN_VALUE) {
 			category = display.waitForPlayerToSelectCategory();
 		}
