@@ -39,9 +39,13 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 
 		String bip = "rsr.mp3";
-		Media hit = new Media(new File(bip).toURI().toString());
-		MediaPlayer mediaPlayer = new MediaPlayer(hit);
-		mediaPlayer.play();
+		try {
+			Media hit = new Media(new File(bip).toURI().toString());
+			MediaPlayer mediaPlayer = new MediaPlayer(hit);
+			mediaPlayer.play();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
