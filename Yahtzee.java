@@ -20,7 +20,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * program will start, because it needs this information to draw specific score's 
 	 * table on canvas. Also there is created score_board matrix variable in
 	 * this method, which is for calculating player's points in the game, so
-	 * the playGame method has a parameter for that. finally, playGame method
+	 * the playGame method has a parameter for that. finally, the game will start by
+	 * the playGame method.
 	 * */
 	public void run() {
 		IODialog dialog = getDialog();
