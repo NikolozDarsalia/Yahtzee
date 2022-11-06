@@ -193,9 +193,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* This method is for upper categories. It needs two argument - 
-	 * massive of dices and category number and returns sum of values
+	 * massive of dices and category number and returns sum of values,
 	 * which are equals to category number selected by player.
-	 *  For example, category number 1 is for ones, number 2 for twos, etc. 
+	 * For example, category number 1 is for ones, number 2 for twos, etc. 
 	 * */
 	private int upperCategoryScore(int[] dices, int category) {
 		int score = 0;
@@ -209,7 +209,12 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* */
+	/* This method checks if any kinds of value is repeated n times in 
+	 * a dices massive. It has two arguments - massive of dices and integer argument
+	 * n. If any kinds of value is repeated n times in a massive,
+	 * method will return sum of all five values of massive, in other situation,
+	 * the result will be 0. 
+	 * */
 	private int nOfAKind(int[] dices, int n) {
 		int count = 0;
 		
