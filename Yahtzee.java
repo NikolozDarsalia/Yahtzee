@@ -115,6 +115,22 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
+	/* score_board matrix is created in play_game method to control scores of players,
+	 * it contains 17 rows and its number of columns depends on number of players.
+	 * Its rows contain categories, upper bonus, upper and lower scores and total score
+	 * values. This method gives that matrix the beginning form to start filling of it.
+	 * after this method, all the values of matrix will be equal to Integer.MIN_VALUE.  
+	 * */
+	private int[][] fillScoreBoard(int[][] score_board){
+		for(int player = 1; player <= nPlayers; player++) {
+			for(int category = 1; category <= N_CATEGORIES; category++) {
+				score_board[player-1][category-1] = Integer.MIN_VALUE;
+			}
+		}
+		return score_board;
+	}
+	
+	
 	/* after the final dices will be generated, player needs to select
 	 * category to earn scores. This method needs 4 arguments - final version of dices 
 	 * massive, player number, category number, and matrix of score's board
@@ -143,22 +159,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateUpperScore(score_board);
 		calculateLowerScore(score_board);
 		
-	}
-	
-	
-	/* score_board matrix is created in play_game method to control scores of players,
-	 * it contains 17 rows and its number of columns depends on number of players.
-	 * Its rows contain categories, upper bonus, upper and lower scores and total score
-	 * values. This method gives that matrix the beginning form to start filling of it.
-	 * after this method, all the values of matrix will be equal to Integer.MIN_VALUE.  
-	 * */
-	private int[][] fillScoreBoard(int[][] score_board){
-		for(int player = 1; player <= nPlayers; player++) {
-			for(int category = 1; category <= N_CATEGORIES; category++) {
-				score_board[player-1][category-1] = Integer.MIN_VALUE;
-			}
-		}
-		return score_board;
 	}
 	
 	
