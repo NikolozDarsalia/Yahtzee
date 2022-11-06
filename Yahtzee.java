@@ -32,7 +32,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	
 	/* This method describes the progress of the game. Until the result
-	 * of gameOver method is false each player have a first try and then two
+	 * of gameOver method is false, each player have a first try and then two
 	 * chances to change result of randomly generated dices, if they don't select any 
 	 * dices on their second try, there will be no third try.   */
 	private void playGame(int[][] score_board) {
