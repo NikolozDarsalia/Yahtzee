@@ -139,7 +139,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * in other situation, the score will be 0. 
 	 * Each player doesn't have an option to choose same categories again. 
 	 * Finally, after this function, player's score for selected category, 
-	 * sum of player's upper scores and lower scores and total score 
+	 * sum of player's upper and lower scores and total score 
 	 * will be changed in score_board matrix and also adds on canvas.
 	 * */
 	private void addScore(int[] dices, int player, int category, int[][] score_board) {
