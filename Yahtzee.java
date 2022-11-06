@@ -217,7 +217,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * This method is for Three of a Kind, Four of a Kind and Yatzee categories.
 	 * In first two of them, getScore method will return sum of all 5 values.
 	 * Yatzee means that all five dices have same values and the result in this case
-	 * will be fixed 50, not sum of values.
+	 * will be fixed 50, not sum of all values.
 	 * */
 	private int nOfAKind(int[] dices, int n) {
 		int count = 0;
