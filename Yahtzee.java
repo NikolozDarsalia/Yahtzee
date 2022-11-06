@@ -69,7 +69,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* After the player click the roll button this method
 	 * will generate massive with five random integer values from
-	 * 1 to 6, shows it as dices on the canvas and returns it as a massive.  */
+	 * 1 to 6, shows it as dices on the canvas and returns it as a massive.  
+	 * */
 	private int[] firstTry() {
 		int[] dices = new int[N_DICE];
 		for(int n = 1; n <= dices.length; n++) {
@@ -84,6 +85,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* After the first try, player has an option to select dices, which
 	 * they want to change. This method checks if there is any selected dices,
+	 * after the player enters to roll again button, if there is any selected dices
+	 * method's result is true, in other case the result is false.
 	 *  */
 	private boolean hasSelected(int[] dices) {
 		display.waitForPlayerToSelectDice();
