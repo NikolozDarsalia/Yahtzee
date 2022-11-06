@@ -148,7 +148,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* score_board matrix is created in play_game method to control scores of players,
 	 * it contains 17 rows and its number of columns depends on number of players.
-	 * 
+	 * Its rows contain categories, upper bonus, upper and lower scores and total score
+	 * cells.  
 	 * and this method gives that matrix the beginning form to start filling of it.
 	 * after this method, all the values of matrix will be equal to Integer.MIN_VALUE.  
 	 * */
