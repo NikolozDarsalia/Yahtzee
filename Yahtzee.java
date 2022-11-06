@@ -187,8 +187,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* This method calculates sum of upper categories scores for each player
+	/* This method calculates sum of upper category scores for each player
 	 * after a player gets a score for selected category.
+	 * In calculation won't be included Integer.MIN_VALUE scores, because
+	 * it's kinds of scores means that this category hasn't filled yet.
 	 * Upper categories includes - ones, twos, threes, fours, fives and sixes.
 	 * finally, upper scores will add on canvas and write into score_board.
 	 * */
@@ -210,10 +212,13 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* This method calculates sum of lower categories scores for each player
+	/* This method calculates sum of lower category scores for each player
 	 * after a player gets a score for selected category.
-	 * Upper categories includes - ones, twos, threes, fours, fives and sixes.
-	 * finally, upper scores will add on canvas and write into score_board.
+	 * In calculation won't be included Integer.MIN_VALUE scores, because
+	 * it's kinds of scores means that this category hasn't filled yet.
+	 * Lower categories are: three of a kind, four of a kind,
+	 * full house, small straight, large straight, yahtzee and chance.
+	 * finally, lower scores will add on canvas and write into score_board.
 	 * */
 	private void calculateLowerScore(int[][] score_board) {
 		
