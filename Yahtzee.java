@@ -160,7 +160,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 
 	
-	/* After the player gets a score for selected category,
+	/* After a player gets a score for selected category,
 	 * this method will count the sum of scores for each player,
 	 * which includes upper scores, lower scores and upper bonus.
 	 * finally, total values will add on canvas and write into score_board.
@@ -185,7 +185,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* This method calculates sum of upper categories scores for each player.
+	/* This method calculates sum of upper categories scores for each player
+	 * after a player gets a score fo selected category.
 	 * Upper categories includes - ones, twos, threes, fours, fives and sixes.
 	 * 
 	 * */
