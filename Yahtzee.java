@@ -42,7 +42,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		AudioClip rsr_sound = MediaTools.loadAudioClip("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
 		rsr_sound.play();
-		rsr_sound.play();
+	
 //		int[][] score_board = new int[nPlayers][N_CATEGORIES];
 //		fillScoreBoard(score_board);
 //		
