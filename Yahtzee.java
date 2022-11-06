@@ -438,8 +438,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* After the gameOver() method will return true, this method will calculate
-	 * if the sum of upper category values is more than 62 or not for each player,
-	 * if it's more than 62, this 
+	 * if the sum of upper category values is more than 62, or not for each player,
+	 * if it's more than 62, this method will add upper bonus for a player on canvas
+	 * and also in score_board matrix.
 	 * */
 	private void calculateUpperBonus(int[][] score_board) {
 		for(int player = 1; player <= nPlayers; player++) {
