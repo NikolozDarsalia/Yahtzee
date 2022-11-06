@@ -86,7 +86,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.mp3");
 
 	
 	/* After the player click the roll button this method
