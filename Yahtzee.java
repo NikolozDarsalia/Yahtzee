@@ -67,7 +67,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 
 	
-	/* */
+	/* After the player click the roll button this function
+	 * will generate massive with five integer values from
+	 * 1 to 6 and shows it as dices on the canvas.  */
 	private int[] firstTry() {
 		int[] dices = new int[N_DICE];
 		for(int n = 1; n <= dices.length; n++) {
@@ -81,17 +83,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* */
-	private void changeResults(int[] dices) {
-		for(int n = 1; n <= dices.length; n++) {
-			if (display.isDieSelected(n-1)) {
-				dices[n-1] = rgen.nextInt(ONES, SIXES);
-				display.displayDice(dices);
-			}
-		}
-	}
-	
-	
-	/* */
 	private boolean hasSelected(int[] dices) {
 		display.waitForPlayerToSelectDice();
 		for(int n = 1; n <= dices.length; n++) {
@@ -101,6 +92,17 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}
 		
 		return false;
+	}
+	
+	
+	/* */
+	private void changeResults(int[] dices) {
+		for(int n = 1; n <= dices.length; n++) {
+			if (display.isDieSelected(n-1)) {
+				dices[n-1] = rgen.nextInt(ONES, SIXES);
+				display.displayDice(dices);
+			}
+		}
 	}
 	
 	
