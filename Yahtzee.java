@@ -114,7 +114,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* */
+	/* after the final dices will be generated, player needs to select
+	 * category to earn scores. */
 	private void addScore(int[] dices, int player, int[][] score_board) {
 		
 		int category = display.waitForPlayerToSelectCategory();
