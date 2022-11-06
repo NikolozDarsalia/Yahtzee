@@ -240,8 +240,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* Full House means that there are only two kinds of values, each of them
-	 * is repeated three times and another two times. 
+	/* Full House means that there are only two kinds of values, first of them
+	 * is repeated three times and another two times.  
 	 * */
 	private int fullHouse(int[] dices) {
 		int three_of_a_kind = nOfAKind(dices, 3);
