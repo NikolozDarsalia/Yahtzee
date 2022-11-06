@@ -100,7 +100,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* */
+	/* If hasSelected() method's result is true, this method
+	 * will change selected dices values randomly in the dices massive
+	 * and adds it on canvas. 
+	 * */
 	private void changeResults(int[] dices) {
 		for(int n = 1; n <= dices.length; n++) {
 			if (display.isDieSelected(n-1)) {
