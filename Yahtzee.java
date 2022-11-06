@@ -269,7 +269,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* */
+	/* There are two categories about straight - small and and large straight.
+	 * First of them means that there are 4 straight values in a massive,
+	 * second - all 5 values are straight. */
 	private int forStraight(int[] dices, int n) {
 		int count = 1;
 		int [] sorted_dices = sorter(dices);
