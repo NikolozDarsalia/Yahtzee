@@ -36,7 +36,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * chances to change the result of randomly generated dices,
 	 * if they don't select any dices on their second try, 
 	 * there will be no third try. Then they choose the category and earn appropriate
-	 * score for selected category.    */
+	 * score for selected category and all these are happened substitutionally between
+	 * players.   */
 	private void playGame(int[][] score_board) {
 		
 		while(!gameOver(score_board)) {
