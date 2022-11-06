@@ -78,7 +78,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateUpperBonus(score_board);
 		calculateTotal(score_board);
 		isWinner(score_board);
-		
+		rsr_sound.play();
 
 	}
 	
@@ -89,8 +89,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	private String rsr = "https://www.youtube.com/watch?v=8u5draYdFuA&list=PLmHl4qp2eu_6Sd3H4NbFjGvgzULXBaeZN&index=2&ab_channel=LadoBatiashvili";
 	
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 	
 	/* After the player click the roll button this method
 	 * will generate massive with five random integer values from
