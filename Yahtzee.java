@@ -9,9 +9,7 @@ import java.applet.AudioClip;
 import acm.io.*;
 import acm.program.*;
 import acm.util.*;
-import java.io.File;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+
 
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
@@ -35,16 +33,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		for (int i = 1; i <= nPlayers; i++) {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
-		}
-		
-
-		String bip = "rsr.mp3";
-		try {
-			Media hit = new Media(new File(bip).toURI().toString());
-			MediaPlayer mediaPlayer = new MediaPlayer(hit);
-			mediaPlayer.play();
-		}catch(Exception e) {
-			e.printStackTrace();
 		}
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
@@ -101,7 +89,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	
+	private String rsr = "https://www.youtube.com/watch?v=8u5draYdFuA&list=PLmHl4qp2eu_6Sd3H4NbFjGvgzULXBaeZN&index=2&ab_channel=LadoBatiashvili";
 	
 	
 	/* After the player click the roll button this method
