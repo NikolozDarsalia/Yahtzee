@@ -160,7 +160,11 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 
 	
-	/* */
+	/* After the player gets a score for selected category,
+	 * this method will count the sum of scores for each player,
+	 * which includes upper scores, lower scores and upper bonus.
+	 * finally, total values will add on canvas and write into score_board.
+	 *  */
 	private void calculateTotal(int[][] score_board) {
 		
 		for(int player = 1; player <= nPlayers; player++) {
