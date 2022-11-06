@@ -27,7 +27,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * the playGame method.
 	 * */
 	public void run() {
-		AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
+		AudioClip rsr_sound = MediaTools.loadAudioClip("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
 		rsr_sound.play();
 		
 		IODialog dialog = getDialog();
