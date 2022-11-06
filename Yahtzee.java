@@ -419,6 +419,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* This method checks is every cell of score_board matrix filled, or not.
+	 * 
 	 * */
 	private boolean gameOver(int[][] score_board) {
 		for(int player = 1; player <= nPlayers; player++) {
