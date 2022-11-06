@@ -242,7 +242,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* Full House means that there are only two kinds of values, first of them
 	 * is repeated three times and another two times. This method checks if
-	 * the massive of dices is full house, if it's right that the result will be
+	 * the massive of dices is full house, if it's right than the result will be
 	 * 25 score, if it's not - 0. 
 	 * */
 	private int fullHouse(int[] dices) {
