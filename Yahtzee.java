@@ -27,8 +27,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * the playGame method.
 	 * */
 	public void run() {
-		AudioClip rsr_sound = MediaTools.loadAudioClip("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
-		rsr_sound.play();
 		
 		IODialog dialog = getDialog();
 		nPlayers = dialog.readInt("Enter number of players");
@@ -38,12 +36,17 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
 		
+		
+		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-		int[][] score_board = new int[nPlayers][N_CATEGORIES];
-		fillScoreBoard(score_board);
+		AudioClip rsr_sound = MediaTools.loadAudioClip("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
+		rsr_sound.play();
 		
-		playGame(score_board);
+//		int[][] score_board = new int[nPlayers][N_CATEGORIES];
+//		fillScoreBoard(score_board);
+//		
+//		playGame(score_board);
 		
 		
 	}
