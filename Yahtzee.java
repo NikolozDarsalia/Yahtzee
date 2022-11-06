@@ -301,7 +301,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* This method is created for forStraight method. It needs an massive typed
-	 * argument and returns ascending sorted version of it. For That selection
+	 * argument and returns ascending sorted version of it. For that selection
 	 * sorting principle is used. 
 	 * */
 	private int[] sorter(int[] dices) {
