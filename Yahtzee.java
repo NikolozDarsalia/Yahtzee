@@ -160,20 +160,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* */
-	private boolean gameOver(int[][] score_board) {
-		for(int player = 1; player <= nPlayers; player++) {
-			for(int category = 1; category <= N_CATEGORIES; category++) {
-				if(category != UPPER_BONUS) {
-					if(score_board[player-1][category-1] == Integer.MIN_VALUE) {
-						return false;
-					}
-				}
-			}
-		}
-		
-		return true;
-	}
+	
 	
 	
 	/* */
@@ -244,21 +231,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				display.updateScorecard(UPPER_BONUS, player, 35);
 			}
 		}
-	}
-	
-	
-	/* */
-	private void isWinner(int[][] score_board) {
-		int total_score = 0;
-		int winner = 0;
-		for(int player = 1; player <= nPlayers; player++) {
-			if (score_board[player-1][TOTAL-1] > total_score) {
-				total_score = score_board[player-1][TOTAL-1];
-				winner = player;
-			}
-		}
-		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
-		
 	}
 	
 	
@@ -401,5 +373,35 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		return score;
 	}
 	
+	
+	/* */
+	private boolean gameOver(int[][] score_board) {
+		for(int player = 1; player <= nPlayers; player++) {
+			for(int category = 1; category <= N_CATEGORIES; category++) {
+				if(category != UPPER_BONUS) {
+					if(score_board[player-1][category-1] == Integer.MIN_VALUE) {
+						return false;
+					}
+				}
+			}
+		}
+		
+		return true;
+	}
+	
+	
+	/* */
+	private void isWinner(int[][] score_board) {
+		int total_score = 0;
+		int winner = 0;
+		for(int player = 1; player <= nPlayers; player++) {
+			if (score_board[player-1][TOTAL-1] > total_score) {
+				total_score = score_board[player-1][TOTAL-1];
+				winner = player;
+			}
+		}
+		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
+		
+	}
 	
 }
