@@ -9,6 +9,9 @@ import java.applet.AudioClip;
 import acm.io.*;
 import acm.program.*;
 import acm.util.*;
+import java.io.File;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
@@ -53,7 +56,11 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * finally, prints the name of winner.
 	 * */
 	private void playGame(int[][] score_board) {
-		rsr_sound.play();
+		String bip = "rsr.mp3";
+		Media hit = new Media(new File(bip).toURI().toString());
+		MediaPlayer mediaPlayer = new MediaPlayer(hit);
+		mediaPlayer.play();
+		
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
 				display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
@@ -76,7 +83,11 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateUpperBonus(score_board);
 		calculateTotal(score_board);
 		isWinner(score_board);
-		rsr_sound.play();
+		
+		String bip = "rsr.mp3";
+		Media hit = new Media(new File(bip).toURI().toString());
+		MediaPlayer mediaPlayer = new MediaPlayer(hit);
+		mediaPlayer.play();
 	}
 	
 	
@@ -86,8 +97,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.mp3");
-
+	
+	
 	
 	/* After the player click the roll button this method
 	 * will generate massive with five random integer values from
