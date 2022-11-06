@@ -300,7 +300,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* This method is created for forStraight method. It needs an massive typed
+	/* This method is created for forStraight method. It needs a massive typed
 	 * argument and returns ascending sorted version of it. For that selection
 	 * sorting principle is used. 
 	 * */
