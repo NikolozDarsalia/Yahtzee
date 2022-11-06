@@ -162,7 +162,12 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 
 	
-	/* */
+	/* After a player selects a category, this method will check if 
+	 * the value of dices is appropriate to the selected category.
+	 * If answer is positive, method will return generated score 
+	 * by a logic of selected category. In other case, result of 
+	 * this method will be 0. 
+	 * */
 	private int getScore(int[] dices, int category) {
 		int score = 0;
 		
