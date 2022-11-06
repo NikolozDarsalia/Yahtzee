@@ -4,6 +4,8 @@
  * This program will eventually play the Yahtzee game.
  */
 
+import java.applet.AudioClip;
+
 import acm.io.*;
 import acm.program.*;
 import acm.util.*;
@@ -51,7 +53,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * finally, prints the name of winner.
 	 * */
 	private void playGame(int[][] score_board) {
-		
+		rsr_sound.play();
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
 				display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
@@ -74,6 +76,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateUpperBonus(score_board);
 		calculateTotal(score_board);
 		isWinner(score_board);
+		rsr_sound.play();
 	}
 	
 	
@@ -83,7 +86,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 
 	
 	/* After the player click the roll button this method
