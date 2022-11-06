@@ -227,17 +227,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 	}
 	
-	
-	/* */
-	private void calculateUpperBonus(int[][] score_board) {
-		for(int player = 1; player <= nPlayers; player++) {
-			if(score_board[player-1][UPPER_SCORE - 1] >= 63) {
-				score_board[player-1][UPPER_BONUS - 1] = 35;
-				display.updateScorecard(UPPER_BONUS, player, 35);
-			}
-		}
-	}
-	
+
 	
 	/* */
 	private int getScore(int[] dices, int category) {
@@ -392,6 +382,17 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}
 		
 		return true;
+	}
+	
+	
+	/* */
+	private void calculateUpperBonus(int[][] score_board) {
+		for(int player = 1; player <= nPlayers; player++) {
+			if(score_board[player-1][UPPER_SCORE - 1] >= 63) {
+				score_board[player-1][UPPER_BONUS - 1] = 35;
+				display.updateScorecard(UPPER_BONUS, player, 35);
+			}
+		}
 	}
 	
 	
