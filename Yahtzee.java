@@ -214,6 +214,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * n. If any kinds of value is repeated n times in a massive,
 	 * method will return sum of all five values of massive, in other situation,
 	 * the result will be 0. 
+	 * This method is for Three of a Kind, Four of a Kind and Yatzee categories.
+	 * If all five dices have the same value, it's Yatzee and the result will be
+	 * fixed 50, not sum of values.
 	 * */
 	private int nOfAKind(int[] dices, int n) {
 		int count = 0;
