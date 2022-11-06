@@ -147,8 +147,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	
 	/* score_board matrix is created in play_game method to control scores of players
-	 * and this method gives this matrix the beginning form, after this method
-	 * all the values of matrix will be equal to Integer.MIN_VALUE.  
+	 * and this method gives that matrix the beginning form to start filling of it.
+	 * after this method, all the values of matrix will be equal to Integer.MIN_VALUE.  
 	 * */
 	private int[][] fillScoreBoard(int[][] score_board){
 		for(int player = 1; player <= nPlayers; player++) {
