@@ -358,7 +358,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	/* */
 	private int[] sorter(int[] dices) {
 		
-		for(int i = 1; i < dices.length-2; i++) {
+		for(int i = 1; i < dices.length; i++) {
 			int index = i - 1; 
 			int min = dices[i-1];
 			for(int x = i + 1; x <= dices.length; x++) {
