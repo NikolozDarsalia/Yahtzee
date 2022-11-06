@@ -37,7 +37,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * if they don't select any dices on their second try, 
 	 * there will be no third try. Then they choose the category and earn appropriate
 	 * score for selected category and all these are happened substitutionally between
-	 * players. After the gameOver() method will return true, this method  
+	 * players. After the gameOver method will return true, this method  
 	 * will calculate upper bonuses, then final total scores of players and 
 	 * finally, prints the name of winner.
 	 * */
