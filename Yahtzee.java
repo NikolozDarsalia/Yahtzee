@@ -18,7 +18,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	/* In run method, user inputs the number of players and then 
 	 * the names of the players in dialog bar, until the YahtzeeDisplay graphics
 	 * program will start, because it needs this information to draw specific score's 
-	 * table. Also there is created score_board matrix variable in
+	 * table on canvas. Also there is created score_board matrix variable in
 	 * this method, which is for calculating player's points in the game, so
 	 * the playGame method has a parameter for that. finally, playGame method
 	 * */
