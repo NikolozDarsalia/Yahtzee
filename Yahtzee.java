@@ -452,7 +452,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* */
+	/* Finally, after the calculation of final bonuses and there wi*/
 	private void isWinner(int[][] score_board) {
 		int total_score = 0;
 		int winner = 0;
