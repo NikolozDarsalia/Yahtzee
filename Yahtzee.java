@@ -159,85 +159,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 	}
 
-	
-	/* After a player gets a score for selected category,
-	 * this method will count the sum of scores for each player 
-	 * which includes upper scores, lower scores and upper bonus.
-	 * In calculation won't be included Integer.MIN_VALUE scores, because
-	 * it's kinds of scores means that this category hasn't filled yet.
-	 * finally, total values will add on canvas and write into score_board.
-	 *  */
-	private void calculateTotal(int[][] score_board) {
-		
-		for(int player = 1; player <= nPlayers; player++) {
-			int total = 0;
-			
-			for(int category = 1; category <= N_CATEGORIES; category++) {
-				
-				if(category != UPPER_SCORE && category != LOWER_SCORE && category != TOTAL) {
-					if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
-						total += score_board[player-1][category-1];
-					}
-				}
-			}
-			score_board[player - 1][TOTAL - 1] = total;
-			display.updateScorecard(TOTAL, player, total);
-		}
-		
-	}
-	
-	
-	/* This method calculates sum of upper category scores for each player
-	 * after a player gets a score for selected category.
-	 * In calculation won't be included Integer.MIN_VALUE scores, because
-	 * it's kinds of scores means that this category hasn't filled yet.
-	 * Upper categories includes - ones, twos, threes, fours, fives and sixes.
-	 * finally, upper scores will add on canvas and write into score_board.
-	 * */
-	private void calculateUpperScore(int[][] score_board) {
-		
-		for(int player = 1; player <= nPlayers; player++) {
-			int total = 0;
-			
-			for(int category = 1; category < UPPER_SCORE; category++) {
-				
-				if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
-					total += score_board[player-1][category-1];
-				}
-				
-			}
-			score_board[player - 1][UPPER_SCORE - 1] = total;
-			display.updateScorecard(UPPER_SCORE, player, total);
-		}
-	}
-	
-	
-	/* This method calculates sum of lower category scores for each player
-	 * after a player gets a score for selected category.
-	 * In calculation won't be included Integer.MIN_VALUE scores, because
-	 * it's kinds of scores means that this category hasn't filled yet.
-	 * Lower categories are: three of a kind, four of a kind,
-	 * full house, small straight, large straight, yahtzee and chance.
-	 * finally, lower scores will add on canvas and write into score_board.
-	 * */
-	private void calculateLowerScore(int[][] score_board) {
-		
-		for(int player = 1; player <= nPlayers; player++) {
-			int total = 0;
-			
-			for(int category = THREE_OF_A_KIND; category < LOWER_SCORE; category++) {
-				
-				if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
-					total += score_board[player-1][category-1];
-				}
-				
-			}
-			score_board[player - 1][LOWER_SCORE - 1] = total;
-			display.updateScorecard(LOWER_SCORE, player, total);
-		}
-		
-	}
-	
+
 
 	
 	/* */
@@ -377,6 +299,85 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			score += dice;
 		}
 		return score;
+	}
+	
+	
+	/* After a player gets a score for selected category,
+	 * this method will count the sum of scores for each player 
+	 * which includes upper scores, lower scores and upper bonus.
+	 * In calculation won't be included Integer.MIN_VALUE scores, because
+	 * it's kinds of scores means that this category hasn't filled yet.
+	 * finally, total values will add on canvas and write into score_board.
+	 *  */
+	private void calculateTotal(int[][] score_board) {
+		
+		for(int player = 1; player <= nPlayers; player++) {
+			int total = 0;
+			
+			for(int category = 1; category <= N_CATEGORIES; category++) {
+				
+				if(category != UPPER_SCORE && category != LOWER_SCORE && category != TOTAL) {
+					if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
+						total += score_board[player-1][category-1];
+					}
+				}
+			}
+			score_board[player - 1][TOTAL - 1] = total;
+			display.updateScorecard(TOTAL, player, total);
+		}
+		
+	}
+	
+	
+	/* This method calculates sum of upper category scores for each player
+	 * after a player gets a score for selected category.
+	 * In calculation won't be included Integer.MIN_VALUE scores, because
+	 * it's kinds of scores means that this category hasn't filled yet.
+	 * Upper categories includes - ones, twos, threes, fours, fives and sixes.
+	 * finally, upper scores will add on canvas and write into score_board.
+	 * */
+	private void calculateUpperScore(int[][] score_board) {
+		
+		for(int player = 1; player <= nPlayers; player++) {
+			int total = 0;
+			
+			for(int category = 1; category < UPPER_SCORE; category++) {
+				
+				if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
+					total += score_board[player-1][category-1];
+				}
+				
+			}
+			score_board[player - 1][UPPER_SCORE - 1] = total;
+			display.updateScorecard(UPPER_SCORE, player, total);
+		}
+	}
+	
+	
+	/* This method calculates sum of lower category scores for each player
+	 * after a player gets a score for selected category.
+	 * In calculation won't be included Integer.MIN_VALUE scores, because
+	 * it's kinds of scores means that this category hasn't filled yet.
+	 * Lower categories are: three of a kind, four of a kind,
+	 * full house, small straight, large straight, yahtzee and chance.
+	 * finally, lower scores will add on canvas and write into score_board.
+	 * */
+	private void calculateLowerScore(int[][] score_board) {
+		
+		for(int player = 1; player <= nPlayers; player++) {
+			int total = 0;
+			
+			for(int category = THREE_OF_A_KIND; category < LOWER_SCORE; category++) {
+				
+				if(score_board[player-1][category-1] != Integer.MIN_VALUE) {
+					total += score_board[player-1][category-1];
+				}
+				
+			}
+			score_board[player - 1][LOWER_SCORE - 1] = total;
+			display.updateScorecard(LOWER_SCORE, player, total);
+		}
+		
 	}
 	
 	
