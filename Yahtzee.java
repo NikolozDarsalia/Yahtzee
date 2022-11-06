@@ -36,6 +36,13 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		for (int i = 1; i <= nPlayers; i++) {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
+		
+
+		String bip = "rsr.mp3";
+		Media hit = new Media(new File(bip).toURI().toString());
+		MediaPlayer mediaPlayer = new MediaPlayer(hit);
+		mediaPlayer.play();
+		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
 		int[][] score_board = new int[nPlayers][N_CATEGORIES];
@@ -56,11 +63,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * finally, prints the name of winner.
 	 * */
 	private void playGame(int[][] score_board) {
-		String bip = "rsr.mp3";
-		Media hit = new Media(new File(bip).toURI().toString());
-		MediaPlayer mediaPlayer = new MediaPlayer(hit);
-		mediaPlayer.play();
-		
+
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
 				display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
@@ -84,10 +87,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateTotal(score_board);
 		isWinner(score_board);
 		
-		String bip = "rsr.mp3";
-		Media hit = new Media(new File(bip).toURI().toString());
-		MediaPlayer mediaPlayer = new MediaPlayer(hit);
-		mediaPlayer.play();
+
 	}
 	
 	
