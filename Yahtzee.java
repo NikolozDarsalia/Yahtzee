@@ -162,7 +162,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 
 	
-	/* After selection of category, this method will check if 
+	/* After selection of a category, this method will check if 
 	 * the value of dices is appropriate to the selected category.
 	 * If answer is positive, method will return generated score 
 	 * by a logic of selected category. In other case, result of 
@@ -192,7 +192,11 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* */
+	/* This method is for upper categories. It needs two argument - 
+	 * massive of dices and category number and returns sum of values
+	 * which are equals to category number. For example, category number 1
+	 * is for ones, number 2 for twos, etc. 
+	 * */
 	private int upperCategoryScore(int[] dices, int category) {
 		int score = 0;
 		for(int dice: dices) {
