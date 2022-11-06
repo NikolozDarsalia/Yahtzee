@@ -452,7 +452,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* Finally, after the calculation of final bonuses and final scores will be visible
+	/* Finally, after the calculation of final bonuses, final scores will be visible
 	 * on canvas and in score_board matrix, and this method will print the message
 	 * about which player won the game. 
 	 * */
