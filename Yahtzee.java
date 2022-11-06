@@ -17,7 +17,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	/* In run method, user inputs the number of players and then 
 	 * the names of players in dialog bar, until the YahtzeeDisplay graphics
-	 * program will start.  */
+	 * program will start. Also there is created score_board matrix variable in
+	 * this method, which is for calculating player's points in the game, so
+	 * the playGame method has a parameter for that. */
 	public void run() {
 		IODialog dialog = getDialog();
 		nPlayers = dialog.readInt("Enter number of players");
