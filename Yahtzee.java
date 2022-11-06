@@ -121,8 +121,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * and it checks if the values of dices are appropriate for selected category.
 	 * If answer is positive, player will get score by the logic of specific category,
 	 * in other situation, the score will be 0. 
-	 * Firstly, all the values in score_board matrix are equal to Integer.MIN_VALUE,
-	 * 
+	 * Firstly, all the values in score_board matrix are equal to Integer.MIN_VALUE
+	 * and each of them will change after players choose them. 
 	 * */
 	private void addScore(int[] dices, int player, int category, int[][] score_board) {
 
