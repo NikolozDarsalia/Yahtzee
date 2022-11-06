@@ -123,7 +123,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * in other situation, the score will be 0. 
 	 * Firstly, all the values in score_board matrix are equal to Integer.MIN_VALUE
 	 * and each of them will change after players choose them. Each player doesn't have
-	 * an option to choose same category again.  
+	 * an option to choose same categories again.  
 	 * */
 	private void addScore(int[] dices, int player, int category, int[][] score_board) {
 
