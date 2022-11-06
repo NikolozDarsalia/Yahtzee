@@ -272,7 +272,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	/* There are two categories about straight - small and and large straight.
 	 * First of them means that there are 4 straight values in a massive,
 	 * second - all 5 values are straight. 
-	 * This method checks if n values are in a straight in dices massive. */
+	 * This method checks if n values are in a straight in dices massive. For
+	 * that it uses sorter method, which is described below. */
 	private int forStraight(int[] dices, int n) {
 		int count = 1;
 		int [] sorted_dices = sorter(dices);
