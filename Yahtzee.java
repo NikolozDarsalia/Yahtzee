@@ -9,7 +9,7 @@ import java.applet.AudioClip;
 import acm.io.*;
 import acm.program.*;
 import acm.util.*;
-
+import java.applet.*;
 
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
@@ -40,8 +40,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-		AudioClip rsr_sound = MediaTools.loadAudioClip("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
-		rsr_sound.play();
+		AudioClip ac = getAudioClip(getCodeBase(), "C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
+		ac.play();
+//		AudioClip rsr_sound = MediaTools.loadAudioClip("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
+//		rsr_sound.play();
 	
 //		int[][] score_board = new int[nPlayers][N_CATEGORIES];
 //		fillScoreBoard(score_board);
