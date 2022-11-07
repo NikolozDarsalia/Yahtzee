@@ -5,11 +5,21 @@
  */
 
 import java.applet.AudioClip;
+import java.io.File;
+import java.io.IOException;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineListener;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 import acm.io.*;
 import acm.program.*;
 import acm.util.*;
-import java.applet.*;
 
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
@@ -40,8 +50,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-		AudioClip ac = getAudioClip(getCodeBase(), "C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
-		ac.play();
+		play("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
+		
 //		AudioClip rsr_sound = MediaTools.loadAudioClip("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
 //		rsr_sound.play();
 	
@@ -52,6 +62,50 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		
 	}
+	
+	
+	private void play(String audioFilePath) {
+        File audioFile = new File(audioFilePath);
+        boolean playCompleted = false;
+        try {
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+ 
+            AudioFormat format = audioStream.getFormat();
+ 
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+ 
+            Clip audioClip = (Clip) AudioSystem.getLine(info);
+ 
+            audioClip.addLineListener((LineListener) this);
+ 
+            audioClip.open(audioStream);
+             
+            audioClip.start();
+             
+            while (!playCompleted) {
+                // wait for the playback completes
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+            }
+             
+            audioClip.close();
+             
+        } catch (UnsupportedAudioFileException ex) {
+            System.out.println("The specified audio file is not supported.");
+            ex.printStackTrace();
+        } catch (LineUnavailableException ex) {
+            System.out.println("Audio line for playing back is unavailable.");
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            System.out.println("Error playing the audio file.");
+            ex.printStackTrace();
+        }
+         
+    }
+	
 
 	
 	/* This method describes the progress of the game. Until the result
