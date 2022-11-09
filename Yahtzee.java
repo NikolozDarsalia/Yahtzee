@@ -15,8 +15,8 @@ import acm.util.*;
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	public static void main(String[] args) {
-		AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
-		rsr_sound.play();
+		
+		
 		new Yahtzee().start(args);
 	}
 	
@@ -39,7 +39,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
 		
-		
+		rsr_sound.play();
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
 //		play("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
@@ -508,5 +508,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
 		
 	}
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 	
 }
