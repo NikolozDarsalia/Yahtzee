@@ -36,7 +36,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		for (int i = 1; i <= nPlayers; i++) {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
-		private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
+		AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 		rsr_sound.play();
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
