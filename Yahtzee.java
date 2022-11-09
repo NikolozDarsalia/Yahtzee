@@ -38,14 +38,14 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
 		
-		
+		rsr_sound.play();
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
 //		play("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
 		
 		
-		rsr_sound.play();
+		
 //		int[][] score_board = new int[nPlayers][N_CATEGORIES];
 //		fillScoreBoard(score_board);
 //		
