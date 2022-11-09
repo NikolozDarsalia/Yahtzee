@@ -46,7 +46,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		
 		rsr_sound.play();
-	
 //		int[][] score_board = new int[nPlayers][N_CATEGORIES];
 //		fillScoreBoard(score_board);
 //		
