@@ -5,8 +5,7 @@
  */
 
 import java.applet.AudioClip;
-import java.io.File;
-import java.io.IOException;
+
 
 
 import acm.io.*;
@@ -37,7 +36,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		for (int i = 1; i <= nPlayers; i++) {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
-		
+		private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 		rsr_sound.play();
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
@@ -103,7 +102,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
+	
 	
 //	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 	
