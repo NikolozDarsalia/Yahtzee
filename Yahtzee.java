@@ -39,18 +39,14 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
 		
-		rsr_sound.play();
+
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-//		play("C:\\Users\\User\\Desktop\\assignment5\\Assignment5\\rsr.au");
+		int[][] score_board = new int[nPlayers][N_CATEGORIES];
+		fillScoreBoard(score_board);
 		
-		
-		
-//		int[][] score_board = new int[nPlayers][N_CATEGORIES];
-//		fillScoreBoard(score_board);
-//		
-//		playGame(score_board);
-		
+		playGame(score_board);
+		rsr_sound.play();
 		
 	}
 	
@@ -103,7 +99,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
 	
 //	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 	
@@ -508,6 +504,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
 		
 	}
-	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
+	
 	
 }
