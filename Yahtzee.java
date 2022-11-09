@@ -508,6 +508,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
 		
 	}
-	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
 	
 }
