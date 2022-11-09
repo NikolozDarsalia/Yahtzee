@@ -4,7 +4,7 @@
  * This program will eventually play the Yahtzee game.
  */
 
-import java.applet.AudioClip;
+import java.applet.*;
 
 
 
