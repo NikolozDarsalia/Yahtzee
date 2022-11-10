@@ -46,7 +46,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		fillScoreBoard(score_board);
 		
 		playGame(score_board);
-		rsr_sound.play();
 		
 	}
 	
@@ -88,7 +87,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateUpperBonus(score_board);
 		calculateTotal(score_board);
 		isWinner(score_board);
-//		rsr_sound.play();
+		rsr_sound.play();
 
 	}
 	
