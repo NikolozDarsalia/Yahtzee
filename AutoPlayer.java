@@ -1,4 +1,4 @@
 
-public class AutoPlayer {
+public class AutoPlayer implements YahtzeeConstants {
 
 }
