@@ -14,11 +14,11 @@ import acm.util.*;
 
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
-	public static void main(String[] args) {
-		
-		
-		new Yahtzee().start(args);
-	}
+//	public static void main(String[] args) {
+//		
+//		
+//		new Yahtzee().start(args);
+//	}
 	
 	
 	/* In run method, user inputs the number of players and then 
