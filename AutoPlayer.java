@@ -9,6 +9,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		this.dices = dices;
 		this.tries = tries;
 		this.score_board = score_board;
+//		Yahtzee.main(null);
 	}
 	
 	
