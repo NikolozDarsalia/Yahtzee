@@ -14,11 +14,11 @@ import acm.util.*;
 
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
-//	public static void main(String[] args) {
-//		
-//		
-//		new Yahtzee().start(args);
-//	}
+	public static void main(String[] args) {
+		
+		
+		new Yahtzee().start(args);
+	}
 	
 	
 	/* In run method, user inputs the number of players and then 
@@ -42,7 +42,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-		int[][] score_board = new int[nPlayers][N_CATEGORIES];
+		score_board = new int[nPlayers][N_CATEGORIES];
 		fillScoreBoard(score_board);
 		
 		playGame(score_board);
@@ -98,6 +98,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
+	private int[][] score_board;
 	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
 	
 //	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
