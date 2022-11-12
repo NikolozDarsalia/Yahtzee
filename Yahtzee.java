@@ -99,9 +99,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
 	private int[][] score_board;
-	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
 	private CategoryLogic category_logic;
-	
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
 	
 	/* After the player click the roll button this method
 	 * will generate massive with five random integer values from
