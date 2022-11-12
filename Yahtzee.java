@@ -146,6 +146,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				
 			}
 		}
+		
 		display.displayDice(dices);
 	}
 	
