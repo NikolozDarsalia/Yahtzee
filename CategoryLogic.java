@@ -2,13 +2,12 @@
 public class CategoryLogic implements YahtzeeConstants{
 	
 	private int[] dices = new int[6];
-	private int[][] score_board;
+
 	private int category;
 	
-	public CategoryLogic(int[] dices, int category, int[][] score_board) {
+	public CategoryLogic(int[] dices, int category) {
 		this.dices = dices;
 		this.category = category;
-		this.score_board = score_board;
 	}
 	
 	/* After selection of a category, this method will check if 
