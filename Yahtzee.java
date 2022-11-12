@@ -101,7 +101,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private int[][] score_board;
 	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
 	
-//	private AudioClip rsr_sound = MediaTools.loadAudioClip("rsr.au");
 	
 	/* After the player click the roll button this method
 	 * will generate massive with five random integer values from
@@ -183,7 +182,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			category = display.waitForPlayerToSelectCategory();
 		}
 		
-		int score = getScore(dices, category);
+		int score = 
+//				getScore(dices, category);
 		
 		display.updateScorecard(category, player, score);
 		score_board[player - 1][category - 1] = score;
