@@ -13,4 +13,13 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
+	public int[] selectDices() {
+		return dices;
+	}
+	
+	
+	public int selectCategory() {
+		return 1;
+	}
+	
 }
