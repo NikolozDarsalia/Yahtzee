@@ -22,4 +22,9 @@ public class AutoPlayer implements YahtzeeConstants {
 		return 1;
 	}
 	
+	
+	private int[] remainedCategories() {
+		return dices;
+	}
+	
 }
