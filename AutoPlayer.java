@@ -37,6 +37,17 @@ public class AutoPlayer implements YahtzeeConstants {
 		return remained_categories;
 	}
 	
+	private ArrayList <Integer>  remainedLower(){
+		ArrayList <Integer> remained_lower = new ArrayList<Integer>();
+		for(int category : remainedCategories()) {
+			if(category >= THREE_OF_A_KIND) {
+				remained_lower.add(category);
+			}
+		}
+		return remained_lower;
+	}
+	
+	
 	private double probability(int category) {
 		int positive = 0;
 		int total = 0;
