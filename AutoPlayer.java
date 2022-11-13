@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class AutoPlayer implements YahtzeeConstants {
 	
@@ -23,8 +24,17 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	private int[] remainedCategories() {
-		return dices;
+	private ArrayList <Integer>  remainedCategories() {
+		ArrayList <Integer> remained_categories = new ArrayList<Integer>();
+		
+		for(int category = 1; category <= N_CATEGORIES; category++) {
+			if(category != UPPER_SCORE || category != LOWER_SCORE || category != TOTAL || category != UPPER_BONUS) {
+				if(score_board[1][category-1] == Integer.MIN_VALUE) {
+					remained_categories.add(category);
+				}
+			}
+		}
+		return remained_categories;
 	}
 	
 }
