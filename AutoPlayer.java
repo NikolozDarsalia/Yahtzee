@@ -49,7 +49,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	private double probability(int category) {
+	private double probability(int category, int tries_remained) {
 		int positive = 0;
 		int total = 0;
 		
