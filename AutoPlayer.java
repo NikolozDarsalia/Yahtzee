@@ -67,8 +67,11 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	private int noProblemDices(int category) {
+		int[] copy_dices = deepCopyOfDices();
+		
 		for(int i = 1; i <= dices.length; i++) {
-			copy_dices[i-1]
+			
+			copy_dices[i-1] 
 		}
 		return 1;
 		
