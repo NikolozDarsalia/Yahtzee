@@ -38,11 +38,11 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	private ArrayList <Integer>  remainedLower(){
+	private ArrayList <Integer>  remainedLower(int category){
 		ArrayList <Integer> remained_lower = new ArrayList<Integer>();
-		for(int category : remainedCategories()) {
-			if(category >= THREE_OF_A_KIND) {
-				remained_lower.add(category);
+		for(int lower : remainedCategories()) {
+			if(lower >= THREE_OF_A_KIND) {
+				remained_lower.add(lower);
 			}
 		}
 		return remained_lower;
