@@ -85,13 +85,10 @@ public class AutoPlayer implements YahtzeeConstants {
 				copy_dices[dice-1] = dices[dice-1];
 				expected_values.add((tries_remained* ( ((double) positive) /total) ));
 				indexes.add(dice);
-				
-				positive = 0;
-				total = 0;
 			}
-			else {
-				
-			}
+			
+			positive = 0;
+			total = 0;
 		}
 	
 	}
