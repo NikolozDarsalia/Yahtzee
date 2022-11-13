@@ -37,7 +37,9 @@ public class AutoPlayer implements YahtzeeConstants {
 		return remained_categories;
 	}
 	
-	private double probability() {
+	private double probability(int category) {
+		
+		category_logic.getScore(dices, category);
 		return 0.1;
 	}
 }
