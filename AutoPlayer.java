@@ -73,7 +73,13 @@ public class AutoPlayer implements YahtzeeConstants {
 					positive ++;
 				}
 			}
-			if(positive > 0) break;
+			if(positive > 0) {
+				copy_dices[dice-1] = dices[dice-1];
+				break;
+			}
+			else {
+				
+			}
 		}
 	
 
