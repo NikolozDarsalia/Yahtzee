@@ -37,6 +37,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		return remained_categories;
 	}
 	
+	
 	private ArrayList <Integer>  remainedLower(){
 		ArrayList <Integer> remained_lower = new ArrayList<Integer>();
 		for(int category : remainedCategories()) {
