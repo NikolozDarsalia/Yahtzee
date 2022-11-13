@@ -39,11 +39,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
 		
-
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
-		
-		score_board = new int[nPlayers][N_CATEGORIES];
-		fillScoreBoard(score_board);
 		
 		playGame(score_board);
 		
@@ -64,7 +60,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * finally, prints the name of winner.
 	 * */
 	private void playGame(int[][] score_board) {
-
+		score_board = new int[nPlayers][N_CATEGORIES];
+		fillScoreBoard(score_board);
+		
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
 				display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
