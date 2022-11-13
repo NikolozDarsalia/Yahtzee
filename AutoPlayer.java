@@ -66,6 +66,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		return 0.1;
 	}
 	
+	
 	private ArrayList<Integer> noProblemDices(int category) {
 		ArrayList<Integer> no_prob = new ArrayList<Integer>();
 		int[] copy_dices = deepCopyOfDices();
