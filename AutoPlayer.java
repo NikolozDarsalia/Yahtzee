@@ -14,7 +14,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	public int[] selectDices() {
+	public ArrayList <Integer> selectDices() {
 		return dices;
 	}
 	
@@ -37,4 +37,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		return remained_categories;
 	}
 	
+	private double probability() {
+		return 0.1;
+	}
 }
