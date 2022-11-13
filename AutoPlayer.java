@@ -38,14 +38,17 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	private boolena isLower(int category){
+	private int isLower(){
 		ArrayList <Integer> remained_lower = new ArrayList<Integer>();
-		for(int lower : remainedCategories()) {
-			if(category == lower) {
-				return true;
+		
+		for(int category : remainedCategories()) {
+			category_logic = new CategoryLogic(dices, category);
+			int score = category_logic.getScore();
+			if(score > 0) {
+				return category;
 			}
 		}
-		return false;
+		return -1;
 	}
 	
 	
@@ -61,4 +64,10 @@ public class AutoPlayer implements YahtzeeConstants {
 		}
 		return 0.1;
 	}
+	
+	
+	private double probWhileFirstIsLower() {
+		return 0.1;
+	}
+	
 }
