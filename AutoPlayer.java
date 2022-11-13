@@ -66,8 +66,10 @@ public class AutoPlayer implements YahtzeeConstants {
 		return 0.1;
 	}
 	
-	private int noProblemDices() {
-		
+	private int noProblemDices(int category) {
+		for(int i = 1; i <= dices.length; i++) {
+			dices[i-1]
+		}
 		return 1;
 		
 	}
@@ -75,6 +77,15 @@ public class AutoPlayer implements YahtzeeConstants {
 	private double probWhileFirstIsLower() {
 		
 		return 0.1;
+	}
+	
+	private int[] deepCopyOfDices() {
+		int[] copy_dices = new int[6];
+		for(int i = 1; i <= dices.length; i++) {
+			copy_dices[i-1] = dices[i-1];
+		}
+		
+		return copy_dices;
 	}
 	
 }
