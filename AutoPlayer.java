@@ -39,13 +39,14 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	private int isLower(){
-		ArrayList <Integer> remained_lower = new ArrayList<Integer>();
 		
 		for(int category : remainedCategories()) {
-			category_logic = new CategoryLogic(dices, category);
-			int score = category_logic.getScore();
-			if(score > 0) {
-				return category;
+			if(category >= THREE_OF_A_KIND) {
+				category_logic = new CategoryLogic(dices, category);
+				int score = category_logic.getScore();
+				if(score > 0) {
+					return category;
+				}
 			}
 		}
 		return -1;
