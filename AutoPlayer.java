@@ -15,7 +15,13 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	public ArrayList <Integer> selectDices() {
-		return dices;
+		int category = isLower();
+		if(category != -1) {
+			return noProblemDices(category);
+		}else {
+			
+		}
+		
 	}
 	
 	
@@ -85,11 +91,6 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 	}
 	
-	
-	private double probWhileFirstIsLower() {
-		
-		return 0.1;
-	}
 	
 	private int[] deepCopyOfDices() {
 		int[] copy_dices = new int[6];
