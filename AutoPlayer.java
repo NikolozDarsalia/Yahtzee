@@ -38,14 +38,14 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	private ArrayList <Integer>  remainedLower(int category){
+	private boolena isLower(int category){
 		ArrayList <Integer> remained_lower = new ArrayList<Integer>();
 		for(int lower : remainedCategories()) {
-			if(lower >= THREE_OF_A_KIND) {
-				remained_lower.add(lower);
+			if(category == lower) {
+				return true;
 			}
 		}
-		return remained_lower;
+		return false;
 	}
 	
 	
