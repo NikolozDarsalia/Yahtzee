@@ -63,6 +63,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		int positive = 0;
 		int total = 0;
 		int[] copy_dices = deepCopyOfDices();
+		ArrayList <Double> expected_values = new ArrayList<Double>();
 		
 		for(int dice = 1; dice <= copy_dices.length; dice++) {
 			for(int value = 1; value <= SIXES; value++) {
@@ -77,6 +78,8 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 			if(positive > 0) {
 				copy_dices[dice-1] = dices[dice-1];
+				expected_values.add((tries_remained* ( ((double) positive) /total) ));
+				
 				break;
 			}
 			else {
