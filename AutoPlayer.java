@@ -38,8 +38,15 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	private double probability(int category) {
+		int positive = 0;
+		int total = 0;
 		
-		category_logic.getScore(dices, category);
+		category_logic = new CategoryLogic(dices, category);
+		int score = category_logic.getScore();
+		total ++;
+		if(score > 0) {
+			positive ++;
+		}
 		return 0.1;
 	}
 }
