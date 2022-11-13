@@ -66,6 +66,11 @@ public class AutoPlayer implements YahtzeeConstants {
 		return 0.1;
 	}
 	
+	private int noProblemDices() {
+		
+		return 1;
+		
+	}
 	
 	private double probWhileFirstIsLower() {
 		
