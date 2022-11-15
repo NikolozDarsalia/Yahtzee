@@ -6,7 +6,9 @@ public class AutoPlayer implements YahtzeeConstants {
 	private int tries;
 	private int[][] score_board;
 	private CategoryLogic category_logic;
-			
+	
+	private ArrayList<Integer> indexes;
+	private ArrayList<Double> expected_values;
 	
 	public AutoPlayer(int[] dices, int tries, int[][] score_board) {
 		this.dices = dices;
@@ -65,8 +67,6 @@ public class AutoPlayer implements YahtzeeConstants {
 		int positive = 0;
 		int total = 0;
 		int[] copy_dices = deepCopyOfDices();
-		ArrayList <Double> expected_values = new ArrayList<Double>();
-		ArrayList <Integer> indexes = new ArrayList<Integer>();
 		
 		for(int dice = 1; dice <= copy_dices.length; dice++) {
 			
