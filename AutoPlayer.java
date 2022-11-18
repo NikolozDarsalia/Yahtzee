@@ -10,6 +10,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	private ArrayList<Integer> indexes;
 	private ArrayList<Double> expected_values;
 	
+	
+	
 	public AutoPlayer(int[] dices, int tries, int[][] score_board) {
 		this.dices = dices;
 		this.tries = tries;
@@ -30,9 +32,11 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
+	
 	public int selectCategory() {
 		return 1;
 	}
+	
 	
 	
 	private ArrayList <Integer>  remainedCategories() {
@@ -47,6 +51,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		}
 		return remained_categories;
 	}
+	
 	
 	
 	private int[] isLower(){
@@ -68,6 +73,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 		return result;
 	}
+	
 	
 	
 	private double probability(int category, int tries_remained) {
@@ -102,6 +108,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
+	
 	private ArrayList<Integer> noProblemDices(int category, int score) {
 		ArrayList<Integer> no_prob = new ArrayList<Integer>();
 		int[] copy_dices = deepCopyOfDices();
@@ -119,6 +126,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		return no_prob;
 		
 	}
+	
 	
 	
 	private int[] deepCopyOfDices() {
