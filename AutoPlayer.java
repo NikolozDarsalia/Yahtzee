@@ -19,9 +19,10 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	public ArrayList <Integer> selectDices() {
-		int category = isLower();
+		int category = isLower()[0];
+		int score = isLower()[1];
 		if(category != -1) {
-			return noProblemDices(category);
+			return noProblemDices(category, score);
 		}else {
 			
 		}
@@ -100,15 +101,15 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	private ArrayList<Integer> noProblemDices(int category) {
+	private ArrayList<Integer> noProblemDices(int category, int score) {
 		ArrayList<Integer> no_prob = new ArrayList<Integer>();
 		int[] copy_dices = deepCopyOfDices();
 
 		for(int i = 1; i <= dices.length; i++) {
 			copy_dices[i-1] = -1;
 			category_logic = new CategoryLogic(dices, category);
-			int score = category_logic.getScore();
-			if(score == ) {
+			int new_score = category_logic.getScore();
+			if(new_score == score) {
 				no_prob.add(i);
 			}
 			copy_dices[i-1] = dices[i-1];
