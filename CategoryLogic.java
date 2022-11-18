@@ -1,3 +1,4 @@
+import acm.util.ErrorException;
 
 public class CategoryLogic implements YahtzeeConstants{
 	
@@ -38,6 +39,30 @@ public class CategoryLogic implements YahtzeeConstants{
 			score = chance(dices); 
 		}
 		return score;
+	}
+	
+	
+	/* Score map for calculate probabilities in AutoPlayer class.
+	 * It's different from getScore method, because potential upper bonus
+	 * effect is included in the calculation of upper category's results.
+	 *  */
+	public int scoresMap() {
+		switch(category) {
+		case 1: return getScore() + getScore()/63*35;
+		case 2: return getScore() + getScore()/63*35;
+		case 3: return getScore() + getScore()/63*35;
+		case 4: return getScore() + getScore()/63*35;
+		case 5: return getScore() + getScore()/63*35;
+		case 6: return getScore() + getScore()/63*35;
+		case 9: return getScore();
+		case 10: return getScore();
+		case 11: return getScore();
+		case 12: return getScore();
+		case 13: return getScore();
+		case 14: return getScore();
+		case 15: return getScore();
+		default: throw new ErrorException("Tries: Illegal index");
+		}
 	}
 	
 	
