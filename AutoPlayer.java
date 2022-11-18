@@ -48,7 +48,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	private int isLower(){
+	private int[] isLower(){
 		int cat = -1;
 		int score_old = 0;
 		for(int category : remainedCategories()) {
@@ -61,7 +61,10 @@ public class AutoPlayer implements YahtzeeConstants {
 				}
 			}
 		}
-		return -1;
+		
+		int[] result = {cat,score_old};
+		
+		return result;
 	}
 	
 	
@@ -105,7 +108,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			copy_dices[i-1] = -1;
 			category_logic = new CategoryLogic(dices, category);
 			int score = category_logic.getScore();
-			if(score > 0) {
+			if(score == ) {
 				no_prob.add(i);
 			}
 			copy_dices[i-1] = dices[i-1];
