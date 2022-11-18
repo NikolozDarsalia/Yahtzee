@@ -118,7 +118,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		for(int i = 1; i <= dices.length; i++) {
 			copy_dices[i-1] = -1;
 			category_logic = new CategoryLogic(dices, category);
-			int new_score = category_logic.scoresMap();
+			int new_score = category_logic.getScore();
 			if(new_score == score) {
 				no_prob.add(i);
 			}
