@@ -88,7 +88,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			for(int value = 1; value <= SIXES; value++) {
 				copy_dices[dice-1] = value;
 				category_logic = new CategoryLogic(copy_dices, category);
-				int score = category_logic.getScore();
+				int score = category_logic.scoresMap();
 				total ++;
 				if(score > 0 && score == score_old) {
 					positive ++;
