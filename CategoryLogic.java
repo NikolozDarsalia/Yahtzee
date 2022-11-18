@@ -63,6 +63,7 @@ public class CategoryLogic implements YahtzeeConstants{
 		case 15: return getScore();
 		default: throw new ErrorException("Tries: Illegal index");
 		}
+		
 	}
 	
 	
