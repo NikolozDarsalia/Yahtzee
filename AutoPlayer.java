@@ -34,7 +34,19 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	public int selectCategory() {
-		return 1;
+		int prev_score = 0;
+		int answer = 0;
+		
+		for(int category : remainedCategories()) {
+			category_logic = new CategoryLogic(dices, category);
+			int score = category_logic.scoresMap();
+			if(score > prev_score) {
+				answer = category;
+				prev_score = score;
+			}
+		}
+		
+		return answer;
 	}
 	
 	
