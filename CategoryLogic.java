@@ -42,7 +42,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	}
 	
 	
-	/* Score map for calculate probabilities in AutoPlayer class.
+	/* Score map is for calculate probabilities in AutoPlayer class.
 	 * It's different from getScore method, because potential upper bonus
 	 * effect is included in the calculation of upper category's results.
 	 *  */
