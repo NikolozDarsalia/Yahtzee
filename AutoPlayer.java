@@ -76,10 +76,12 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
-	private double probability(int category, int tries_remained) {
+	private void probability(int category, int tries_remained) {
 		int positive = 0;
 		int total = 0;
 		int[] copy_dices = deepCopyOfDices();
+		double expected_value = 0;
+		int score_old = 0;
 		
 		for(int dice = 1; dice <= copy_dices.length; dice++) {
 			
@@ -88,7 +90,7 @@ public class AutoPlayer implements YahtzeeConstants {
 				category_logic = new CategoryLogic(copy_dices, category);
 				int score = category_logic.getScore();
 				total ++;
-				if(score > 0) {
+				if(score > 0 && score == score_old) {
 					positive ++;
 				}
 				
@@ -116,7 +118,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		for(int i = 1; i <= dices.length; i++) {
 			copy_dices[i-1] = -1;
 			category_logic = new CategoryLogic(dices, category);
-			int new_score = category_logic.getScore();
+			int new_score = category_logic.scoresMap();
 			if(new_score == score) {
 				no_prob.add(i);
 			}
