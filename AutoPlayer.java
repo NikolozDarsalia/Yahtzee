@@ -52,6 +52,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	private int[] isLower(){
 		int cat = -1;
 		int score_old = 0;
+		
 		for(int category : remainedCategories()) {
 			if(category >= THREE_OF_A_KIND) {
 				category_logic = new CategoryLogic(dices, category);
