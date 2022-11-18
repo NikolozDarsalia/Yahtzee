@@ -11,7 +11,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	private ArrayList<Double> expected_values;
 	
 	
-	
+	/* Constructor */
 	public AutoPlayer(int[] dices, int tries, int[][] score_board) {
 		this.dices = dices;
 		this.tries = tries;
