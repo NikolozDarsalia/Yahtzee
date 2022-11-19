@@ -97,9 +97,11 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 		for(int category : remainedCategories()) {
 			
-			for(int dice : dices_n) {
+			for(int d = 0; d < dices_n.length; d++) {
 				
 				for(int value = 1; value <= SIXES; value++) {
+					for(int value2 = 1; value2 <= SIXES; value2++) {
+					dices_n[0] = 
 					copy_dices[dice-1] = value;
 					category_logic = new CategoryLogic(copy_dices, category);
 					int score = category_logic.scoresMap();
