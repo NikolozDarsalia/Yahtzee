@@ -92,7 +92,6 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	private void probability(int tries_remained) {
 		int positive = 0;
-		int old_score = 0;
 		HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
 		
 		for(int category : remainedCategories()) {
