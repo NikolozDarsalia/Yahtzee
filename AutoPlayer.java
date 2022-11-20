@@ -140,7 +140,9 @@ public class AutoPlayer implements YahtzeeConstants {
 		    }
 		}
 		
-		6 * selected_dices.size()
+		double expected_value = maxEntry.getKey() * maxEntry.getValue() / Math.pow(6, selected_dices.size());
+		
+		return expected_value;
 		
 	}
 		
