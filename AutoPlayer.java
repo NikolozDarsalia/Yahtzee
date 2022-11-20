@@ -166,6 +166,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
+	
 	private int[] newDices(int[] new_dices) {
 		for(int i = 1; i <= new_dices.length; i++) {
 			if(new_dices[i-1] == 0)	new_dices[i-1] = dices[i-1];
@@ -173,6 +174,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 		return new_dices;
 	}
+	
 	
 	
 	private ArrayList<Integer> noProblemDices(int category, int score) {
