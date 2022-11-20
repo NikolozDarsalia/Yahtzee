@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AutoPlayer implements YahtzeeConstants {
 	
@@ -90,12 +92,11 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	private void probability(int tries_remained) {
 		int positive = 0;
-		int total = 0;
-		int[] copy_dices = deepCopyOfDices();
-		double expected_value = 0;
-		int score_old = 0;
+		int old_score = 0;
+		Map< ArrayList<Integer>, Map<Integer, Integer> > map = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
+		
 		for(int category : remainedCategories()) {
-			
+			ArrayList<Integer> scores = new ArrayList<Integer>();
 			for(int fifth = 0; fifth <= dices.length; fifth++) {
 				for(int fourth = 0; fourth <= dices.length; fourth++) {
 					for(int third = 0; third <= dices.length; third++) {
@@ -103,8 +104,12 @@ public class AutoPlayer implements YahtzeeConstants {
 							
 							for(int first = 1; first <= dices.length; first++) {
 								int[] new_dices = {first, second, third, fourth, fifth};
+								newDices(new_dices);
 								category_logic = new CategoryLogic(new_dices, category);
 								int score = category_logic.scoresMap();
+								if(score > 0) {
+									
+								}
 								
 							}
 						}
@@ -119,7 +124,11 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	private int[] newDices(int[] new_dices) {
-		for(int i = 1; i <= dices.length
+		for(int i = 1; i <= new_dices.length; i++) {
+			if(new_dices[i-1] == 0)	new_dices[i-1] = dices[i-1];
+		}
+		
+		return new_dices;
 	}
 	
 	
