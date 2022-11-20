@@ -108,7 +108,8 @@ public class AutoPlayer implements YahtzeeConstants {
 								category_logic = new CategoryLogic(new_dices, category);
 								int score = category_logic.scoresMap();
 								if(score > 0) {
-									
+//									map.put(list, ); 
+									map.put(key, map.get(key).get(key) + 1);
 								}
 								
 							}
@@ -120,6 +121,17 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 
 	
+	}
+	
+	
+	private ArrayList<Integer> selectedDices(int[] new_dices){
+		ArrayList<Integer> selected_dices = new ArrayList<Integer>();
+		
+		for(int i = 1; i <= new_dices.length; i++) {
+			if(new_dices[i-1] != 0)	selected_dices.add(i);
+		}
+		
+		return selected_dices;
 	}
 	
 	
