@@ -93,10 +93,10 @@ public class AutoPlayer implements YahtzeeConstants {
 	private void probability(int tries_remained) {
 		int positive = 0;
 		int old_score = 0;
-		Map< ArrayList<Integer>, Map<Integer, Integer> > map = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
+		HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
 		
 		for(int category : remainedCategories()) {
-			ArrayList<Integer> scores = new ArrayList<Integer>();
+	
 			for(int fifth = 0; fifth <= dices.length; fifth++) {
 				for(int fourth = 0; fourth <= dices.length; fourth++) {
 					for(int third = 0; third <= dices.length; third++) {
@@ -104,12 +104,20 @@ public class AutoPlayer implements YahtzeeConstants {
 							
 							for(int first = 1; first <= dices.length; first++) {
 								int[] new_dices = {first, second, third, fourth, fifth};
+								ArrayList<Integer> selected_dices = selectedDices(new_dices);
 								newDices(new_dices);
+								
 								category_logic = new CategoryLogic(new_dices, category);
 								int score = category_logic.scoresMap();
+								
+								 Map<Integer, Integer> scores_p = dict.get(selected_dices);
+								
 								if(score > 0) {
-//									map.put(list, ); 
-									map.put(key, map.get(key).get(key) + 1);
+									if (scores_p == null) {
+									dict.put(selected_dices, new HashMap<>());
+									dict.get(selected_dices).put(score, 1);
+									}else {
+									dict.get(selected_dices).put(score, dict.get(selected_dices).get(score) + 1);
 								}
 								
 							}
