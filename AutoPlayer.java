@@ -150,6 +150,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 	
 	
+	
 	private ArrayList<Integer> selectedDices(int[] new_dices){
 		ArrayList<Integer> selected_dices = new ArrayList<Integer>();
 		
