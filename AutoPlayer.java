@@ -132,7 +132,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	private double getMaxExpectedValue(HashMap<Integer, Integer> dict){
-		
+		 for (dict.Entry<String, String> set : dict.entrySet()) {
 	}
 		
 	
