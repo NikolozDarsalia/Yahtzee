@@ -131,7 +131,11 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	}
 	
-	
+	/* zevit yvela for loop rom morcheba gveqneba titoeuli variantis chrilshi ra qulis ageba 
+	 * ramdenjer dafiqsirda. am funqciashi davajamebt matematikur molodinebs titoeuli kamatlebis archevis
+	 * variantis chrilshi da shemdeg gamoviyvant mat shoris maqsimalurs. metodi daabrunebs pirdapir
+	 * asarchevi kamatlebis lists. 
+	 *  */
 	
 	private double getMaxExpectedValue(HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<Integer> selected_dices){
 		Map.Entry<Integer, Integer> maxEntry = null;
