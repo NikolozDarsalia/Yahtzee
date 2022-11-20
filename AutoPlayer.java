@@ -96,12 +96,12 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 		for(int category : remainedCategories()) {
 	
-			for(int fifth = 0; fifth <= dices.length; fifth++) {
-				for(int fourth = 0; fourth <= dices.length; fourth++) {
-					for(int third = 0; third <= dices.length; third++) {
-						for(int second = 0; second <= dices.length; second++) {
+			for(int fifth = 0; fifth <= 6; fifth++) {
+				for(int fourth = 0; fourth <= 6; fourth++) {
+					for(int third = 0; third <= 6; third++) {
+						for(int second = 0; second <= 6; second++) {
 							
-							for(int first = 1; first <= dices.length; first++) {
+							for(int first = 1; first <= 6; first++) {
 								int[] new_dices = {first, second, third, fourth, fifth};
 								ArrayList<Integer> selected_dices = selectedDices(new_dices);
 								newDices(new_dices);
@@ -120,25 +120,28 @@ public class AutoPlayer implements YahtzeeConstants {
 									}
 								}
 								
+							}
 						}
 					}
 				}
 			}
-		}
 		
 			
-	}
+		}
 	
 	}
 	
-	private double getMaxExpectedValue(HashMap<Integer, Integer> dict){
+	private double getMaxExpectedValue(HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<Integer> selected_dices){
 		Map.Entry<Integer, Integer> maxEntry = null;
 
-		for (Map.Entry<Integer, Integer> entry : dict.entrySet()){
+		for (Map.Entry<Integer, Integer> entry : dict.get(selected_dices).entrySet()){
 		    if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0){
 		        maxEntry = entry;
 		    }
 		}
+		
+		6 * selected_dices.size()
+		
 	}
 		
 	
