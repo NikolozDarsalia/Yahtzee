@@ -133,8 +133,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	/* zevit yvela for loop rom morcheba gveqneba titoeuli variantis chrilshi ra qulis ageba 
 	 * ramdenjer dafiqsirda. am funqciashi davajamebt matematikur molodinebs titoeuli kamatlebis archevis
-	 * variantis chrilshi, selected_dices listis nacvlad dagvchirdeba yvela selected_dicesisgan
-	 * shemdgari listi da shemdeg gamoviyvant mat shoris maqsimalurs. metodi daabrunebs pirdapir
+	 * variantis chrilshi (selected_dices listis nacvlad dagvchirdeba yvela selected_dicesisgan
+	 * shemdgari listi) da shemdeg gamoviyvant mat shoris maqsimalurs. metodi daabrunebs pirdapir
 	 * asarchevi kamatlebis lists. 
 	 *  */
 	
