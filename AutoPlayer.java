@@ -100,6 +100,7 @@ public class AutoPlayer implements YahtzeeConstants {
 				for(int third = 0; third <= N_DICE; third++) {
 					for(int second = 0; second <= N_DICE; second++) {
 						for(int first = 1; first <= N_DICE; first++) {
+							int[] new_dices = {first, second, third, fourth, fifth};
 							
 							
 						}
