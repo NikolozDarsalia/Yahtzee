@@ -132,7 +132,13 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	private double getMaxExpectedValue(HashMap<Integer, Integer> dict){
-		 for (dict.Entry<String, String> set : dict.entrySet()) {
+		Map.Entry<Integer, Integer> maxEntry = null;
+
+		for (Map.Entry<Integer, Integer> entry : dict.entrySet()){
+		    if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0){
+		        maxEntry = entry;
+		    }
+		}
 	}
 		
 	
