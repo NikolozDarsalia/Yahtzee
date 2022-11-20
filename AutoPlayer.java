@@ -94,15 +94,19 @@ public class AutoPlayer implements YahtzeeConstants {
 		int[] copy_dices = deepCopyOfDices();
 		double expected_value = 0;
 		int score_old = 0;
-		
-		for(int fifth = 0; fifth <= N_DICE; fifth++) {
-			for(int fourth = 0; fourth <= N_DICE; fourth++) {
-				for(int third = 0; third <= N_DICE; third++) {
-					for(int second = 0; second <= N_DICE; second++) {
-						for(int first = 1; first <= N_DICE; first++) {
-							int[] new_dices = {first, second, third, fourth, fifth};
+		for(int category : remainedCategories()) {
+			
+			for(int fifth = 0; fifth <= dices.length; fifth++) {
+				for(int fourth = 0; fourth <= dices.length; fourth++) {
+					for(int third = 0; third <= dices.length; third++) {
+						for(int second = 0; second <= dices.length; second++) {
 							
-							
+							for(int first = 1; first <= dices.length; first++) {
+								int[] new_dices = {first, second, third, fourth, fifth};
+								category_logic = new CategoryLogic(new_dices, category);
+								int score = category_logic.scoresMap();
+								
+							}
 						}
 					}
 				}
@@ -113,6 +117,10 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	}
 	
+	
+	private int[] newDices(int[] new_dices) {
+		for(int i = 1; i <= dices.length
+	}
 	
 	
 	private ArrayList<Integer> noProblemDices(int category, int score) {
