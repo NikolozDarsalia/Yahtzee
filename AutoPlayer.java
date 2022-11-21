@@ -28,7 +28,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		if(category != -1) {
 			return noProblemDices(category, score);
 		}else {
-			
+			return chooseByExpectedValues(tries);
 		}
 		
 	}
@@ -90,7 +90,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
-	private void probability(int tries_remained) {
+	private ArrayList<ArrayList<Integer>> chooseByExpectedValues(int tries_remained) {
 		int positive = 0;
 		HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
 		
@@ -131,8 +131,23 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	}
 	
-
 	
+	
+	private ArrayList<ArrayList <Integer>> selecteds(){
+		for(int fifth = 0; fifth <= 6; fifth++) {
+			for(int fourth = 0; fourth <= 6; fourth++) {
+				for(int third = 0; third <= 6; third++) {
+					for(int second = 0; second <= 6; second++) {
+						ArrayList<Integer> selected_dices = selectedDices(new_dices);
+					}
+				}
+			}
+		}
+		
+	}
+	
+					
+					
 	private ArrayList<Integer> getMaxExpectedValue(HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<ArrayList <Integer>> selecteds){
 
 		HashMap< ArrayList<Integer>, Double > expected_values_dict = new HashMap< ArrayList<Integer>, Double >();
