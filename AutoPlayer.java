@@ -90,7 +90,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
-	private ArrayList<ArrayList<Integer>> chooseByExpectedValues(int tries_remained) {
+	private ArrayList<Integer> chooseByExpectedValues(int tries_remained) {
 		
 		HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
 		
