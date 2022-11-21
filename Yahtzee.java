@@ -5,8 +5,7 @@
  */
 
 import java.applet.*;
-
-
+import java.util.ArrayList;
 
 import acm.io.*;
 import acm.program.*;
