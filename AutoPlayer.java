@@ -9,8 +9,6 @@ public class AutoPlayer implements YahtzeeConstants {
 	private int[][] score_board;
 	private CategoryLogic category_logic;
 	
-	private ArrayList<Integer> indexes;
-	private ArrayList<Double> expected_values;
 	
 	
 	/* This is the AutoPlayer constructor */
