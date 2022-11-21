@@ -158,7 +158,14 @@ public class AutoPlayer implements YahtzeeConstants {
 			double expected_value = 0;
 			
 			for(int score : dict.get(selected_dices).keySet()) {
-				expected_value += (double) score * (tries_remained * dict.get(selected_dices).get(score) / Math.pow(6, selected_dices.size()));
+				double probability_non = 1 - (double) dict.get(selected_dices).get(score) / Math.pow(6, selected_dices.size());
+				double probability = (double) dict.get(selected_dices).get(score) / Math.pow(6, selected_dices.size());
+				if(tries_remained == 2) {
+					expected_value += score * (probability + probability * probability_non);
+				}else {
+					expected_value += score * probability;
+				}
+				
 			}
 			
 			if (expected_value > max_expected_value) {
