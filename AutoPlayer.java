@@ -130,7 +130,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		}
 		
 		ArrayList<ArrayList <Integer>> selecteds = (ArrayList) dict.keySet();
-		return getMaxExpectedValueSelection(dict, selecteds);
+		return getMaxExpectedValueSelection(dict, selecteds, tries_remained);
 	
 	}
 	
