@@ -67,26 +67,31 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * will calculate upper bonuses, then final total scores of players and 
 	 * finally, prints the name of winner.
 	 * */
-	private void playGame(int[][] score_board) {
+	private void playGame(int[][] score_board, int against_computer) {
 		score_board = new int[nPlayers][N_CATEGORIES];
 		fillScoreBoard(score_board);
 		
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
-				display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
-				display.waitForPlayerToClickRoll(player);
-				int[] dices = firstTry();
-				
-				for(int x = 1; x < 3; x++) {
-					if(hasSelected(dices)){
-						changeResults(dices);
-					}else {
-						break;
+				if(against_computer == 1 && player == 2) {
+					
+				}else {
+					display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
+					display.waitForPlayerToClickRoll(player);
+					int[] dices = firstTry();
+					
+					for(int x = 1; x < 3; x++) {
+						if(hasSelected(dices)){
+							changeResults(dices);
+						}else {
+							break;
+						}
 					}
+					
+					int category = display.waitForPlayerToSelectCategory();
+					addScore(dices, player, category, score_board);
 				}
 				
-				int category = display.waitForPlayerToSelectCategory();
-				addScore(dices, player, category, score_board);
 			}
 		}
 		
