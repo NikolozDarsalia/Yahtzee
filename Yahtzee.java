@@ -46,6 +46,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			}
 		}
 		
+		rsr_start.play();
+		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
 		playGame(score_board, against_computer);
@@ -124,6 +126,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private int[][] score_board;
 	private CategoryLogic category_logic;
 	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
+	private AudioClip rsr_start = MediaTools.loadAudioClip("rsr_start.au");
 	
 	
 	/* After the player click the roll button this method
