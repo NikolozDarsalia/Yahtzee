@@ -127,7 +127,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
-		getMaxExpectedValue(dict, )
+		return getMaxExpectedValue(dict, )
 	
 	}
 	
