@@ -73,7 +73,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
-				if(against_computer == 1 && player == 2) {
+				if (against_computer == 1 && player == 2) {
 					
 					
 				}else {
@@ -92,7 +92,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 					int category = display.waitForPlayerToSelectCategory();
 					addScore(dices, player, category, score_board);
 				}
-				
+
 			}
 		}
 		
