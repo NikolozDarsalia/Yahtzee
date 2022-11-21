@@ -41,10 +41,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		for (int i = 1; i <= nPlayers; i++) {
 			if(against_computer == 1 && i == 2) {
 				playerNames[i - 1] = "Dr.Sala";
+			}else {
+				playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 			}
-			playerNames[i - 1] = dialog.readLine("Enter name for player " + i);
 		}
-		
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
