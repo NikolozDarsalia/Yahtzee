@@ -105,6 +105,7 @@ public class AutoPlayer implements YahtzeeConstants {
 							for(int first = 1; first <= 6; first++) {
 								int[] new_dices = {first, second, third, fourth, fifth};
 								ArrayList<Integer> selected_dices = selectedDices(new_dices);
+								selecteds.add(selected_dices);
 								newDices(new_dices);
 								
 								category_logic = new CategoryLogic(new_dices, category);
@@ -128,21 +129,19 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
+		selecteds
 		return getMaxExpectedValueSelection(dict, )
 	
 	}
 	
 	
 	
-	private ArrayList<ArrayList <Integer>> selecteds(){
-		for(int fifth = 1; fifth <= 5; fifth++) {
-			for(int fourth = 1; fourth <= 5; fourth++) {
-				for(int third = 1; third <= 5; third++) {
-					for(int second = 1; second <= 5; second++) {
-						ArrayList<Integer> selected_dices = selectedDices(new_dices);
-					}
-				}
-			}
+	private ArrayList<ArrayList <Integer>> getUniqueList(ArrayList<ArrayList<Integer>> selecteds) {
+		 ArrayList<ArrayList <Integer>> base = new  ArrayList<ArrayList <Integer>>();
+		 
+		for(ArrayList <Integer> selected_dices : selecteds) {
+			
+			base.add(selected_dices);
 		}
 		
 	}
