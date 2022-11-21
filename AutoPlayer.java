@@ -141,8 +141,9 @@ public class AutoPlayer implements YahtzeeConstants {
 	private double getMaxExpectedValue(HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<ArrayList <Integer>> selecteds){
 
 		HashMap< ArrayList<Integer>, Double > expected_values_dict = new HashMap< ArrayList<Integer>, Double >();
+		ArrayList<Integer> final_dices = new ArrayList<Integer>();
 		double max_expected_value = 0;
-				
+		
 		for(ArrayList <Integer> selected_dices : selecteds) {
 			double expected_value = 0;
 			
@@ -150,7 +151,10 @@ public class AutoPlayer implements YahtzeeConstants {
 				expected_value += (double) score * dict.get(selected_dices).get(score) / Math.pow(6, selected_dices.size());
 			}
 			
-			if (expected_value > max_expected_value) max_expected_value = expected_value; 
+			if (expected_value > max_expected_value) {
+				final_dices = selected_dices;
+				max_expected_value = expected_value; 
+			}
 	
 		}
 		
