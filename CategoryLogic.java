@@ -5,7 +5,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	private int[] dices = new int[6];
 	private int category;
 	
-	/* Constructor */
+	/* This is the CategoryLogic constructor */
 	public CategoryLogic(int[] dices, int category) {
 		this.dices = dices;
 		this.category = category;
