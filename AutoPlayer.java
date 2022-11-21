@@ -129,21 +129,9 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
-		getUniqueList(selecteds);
+		selecteds = (ArrayList) dict.keySet();
 		return getMaxExpectedValueSelection(dict, selecteds);
 	
-	}
-	
-	
-	
-	private ArrayList<ArrayList <Integer>> getUniqueList(ArrayList<ArrayList<Integer>> selecteds) {
-		 ArrayList<ArrayList <Integer>> base = new  ArrayList<ArrayList <Integer>>();
-		 
-		for(ArrayList <Integer> selected_dices : selecteds) {
-			
-			base.add(selected_dices);
-		}
-		
 	}
 	
 					
