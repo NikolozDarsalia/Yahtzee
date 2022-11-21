@@ -138,7 +138,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * asarchevi kamatlebis lists. 
 	 *  */
 	
-	private double getMaxExpectedValue(HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<ArrayList <Integer>> selecteds){
+	private ArrayList<Integer> getMaxExpectedValue(HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<ArrayList <Integer>> selecteds){
 
 		HashMap< ArrayList<Integer>, Double > expected_values_dict = new HashMap< ArrayList<Integer>, Double >();
 		ArrayList<Integer> final_dices = new ArrayList<Integer>();
@@ -158,7 +158,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 		}
 		
-		return expected_value;
+		return final_dices;
 		
 	}
 		
