@@ -174,13 +174,13 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	private void changeResultsAuto(ArrayList<Integer> selected_dices) {
-		for(int n = 1; n <= dices.length; n++) {
-			if (display.isDieSelected(n-1)) {
-				dices[n-1] = rgen.nextInt(ONES, SIXES);
+	private void changeResultsAuto(int[] dices, ArrayList<Integer> selected_dices) {
+		for(int dice_n : selected_dices) {
+			
+			dices[n-1] = rgen.nextInt(ONES, SIXES);
 				
-			}
 		}
+		
 		
 		display.displayDice(dices);
 	}
