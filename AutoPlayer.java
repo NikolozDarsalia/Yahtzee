@@ -93,6 +93,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	private ArrayList<ArrayList<Integer>> chooseByExpectedValues(int tries_remained) {
 		int positive = 0;
 		HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
+		ArrayList<ArrayList <Integer>> selecteds = new ArrayList<ArrayList <Integer>>();
 		
 		for(int category : remainedCategories()) {
 	
@@ -134,10 +135,10 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	private ArrayList<ArrayList <Integer>> selecteds(){
-		for(int fifth = 0; fifth <= 6; fifth++) {
-			for(int fourth = 0; fourth <= 6; fourth++) {
-				for(int third = 0; third <= 6; third++) {
-					for(int second = 0; second <= 6; second++) {
+		for(int fifth = 1; fifth <= 5; fifth++) {
+			for(int fourth = 1; fourth <= 5; fourth++) {
+				for(int third = 1; third <= 5; third++) {
+					for(int second = 1; second <= 5; second++) {
 						ArrayList<Integer> selected_dices = selectedDices(new_dices);
 					}
 				}
