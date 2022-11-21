@@ -80,6 +80,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 					
 					for(int tries = 2; tries > 0; tries --) {
 						auto = new AutoPlayer(dices, tries, score_board);
+						aoto.selectDices()
 					}
 					
 					
@@ -171,6 +172,19 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display.displayDice(dices);
 	}
+	
+	
+	private void changeResultsAuto(ArrayList<Integer> selected_dices) {
+		for(int n = 1; n <= dices.length; n++) {
+			if (display.isDieSelected(n-1)) {
+				dices[n-1] = rgen.nextInt(ONES, SIXES);
+				
+			}
+		}
+		
+		display.displayDice(dices);
+	}
+	
 	
 	
 	/* score_board matrix is created in run method to control scores of players,
