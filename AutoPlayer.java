@@ -137,7 +137,6 @@ public class AutoPlayer implements YahtzeeConstants {
 					
 	private ArrayList<Integer> getMaxExpectedValueSelection(HashMap< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<ArrayList <Integer>> selecteds, int tries_remained){
 
-		HashMap< ArrayList<Integer>, Double > expected_values_dict = new HashMap< ArrayList<Integer>, Double >();
 		ArrayList<Integer> final_dices = new ArrayList<Integer>();
 		double max_expected_value = 0;
 		
