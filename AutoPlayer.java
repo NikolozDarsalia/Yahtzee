@@ -104,7 +104,7 @@ public class AutoPlayer implements YahtzeeConstants {
 							for(int first = 1; first <= 6; first++) {
 								int[] new_dices = {first, second, third, fourth, fifth};
 								ArrayList<Integer> selected_dices = selectedDices(new_dices);
-								selecteds.add(selected_dices);
+								
 								newDices(new_dices);
 								
 								category_logic = new CategoryLogic(new_dices, category);
