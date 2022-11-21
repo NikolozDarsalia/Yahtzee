@@ -96,6 +96,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
+	private AutoPlayer auto;
 	private int[][] score_board;
 	private CategoryLogic category_logic;
 	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
