@@ -115,7 +115,7 @@ public class AutoPlayer implements YahtzeeConstants {
 										dict.put(selected_dices, new HashMap<>());
 										dict.get(selected_dices).put(score, 1);
 									}else {
-										dict.get(selected_dices).put(score, dict.get(selected_dices).get(score) + 1);
+										dict.get(selected_dices).put(score, 1);
 									}
 								}
 								
