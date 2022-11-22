@@ -39,7 +39,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 		for(int category : remainedCategories()) {
 			category_logic = new CategoryLogic(dices, category);
-			int score = category_logic.scoresMap();
+			int score = category_logic.getScore();
 			if(score > prev_score) {
 				answer = category;
 				prev_score = score;
@@ -106,7 +106,7 @@ public class AutoPlayer implements YahtzeeConstants {
 								newDices(new_dices);
 								
 								category_logic = new CategoryLogic(new_dices, category);
-								int score = category_logic.scoresMap();
+								int score = category_logic.getScore();
 								
 								 Map<Integer, Integer> scores_p = dict.get(selected_dices);
 								
