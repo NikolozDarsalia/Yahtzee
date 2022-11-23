@@ -20,8 +20,8 @@ public class AutoPlayer implements YahtzeeConstants {
 		this.score_board = score_board;
 		this.player = player;
 	}
-	
-	
+
+
 
 	public ArrayList <Integer> selectDices() {
 		int category = isLower()[0];
