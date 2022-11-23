@@ -109,16 +109,16 @@ public class AutoPlayer implements YahtzeeConstants {
 								category_logic = new CategoryLogic(new_dices, category);
 								int score = category_logic.getScore();
 								
-								 Map<Integer, Integer> scores_p = dict.get(selected_dices);
-								 Integer p = dict.get(selected_dices).get(score);
+								Map<Integer, Integer> scores_p = dict.get(selected_dices);
+								
 								if(score > 0) {
 									if (scores_p == null) {
 										dict.put(selected_dices, new HashMap<>());
 										dict.get(selected_dices).put(score, 1);
-									}else if (p == 0) {
+									}else if (dict.get(selected_dices).get(score) == null) {
 										dict.get(selected_dices).put(score, 1);
 									}else {
-										dict.get(selected_dices).put(score, p + 1);
+										dict.get(selected_dices).put(score, dict.get(selected_dices).get(score) + 1);
 									}
 								}
 								
