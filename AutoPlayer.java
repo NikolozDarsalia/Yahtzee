@@ -51,6 +51,10 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
+		if( answer == 0) {
+			
+		}
+		
 		return answer;
 	}
 	
