@@ -22,7 +22,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	
+
 	public ArrayList <Integer> selectDices() {
 		int category = isLower()[0];
 		int score = isLower()[1];
