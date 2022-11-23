@@ -86,6 +86,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 						dices = changeResultsAuto(dices, auto.selectDices());
 					}
 					
+					pause(10000);
 					int category = auto.selectCategory();
 					addScore(dices, player, category, score_board);
 					
