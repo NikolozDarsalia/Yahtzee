@@ -104,8 +104,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 //					int category = display.waitForPlayerToSelectCategory();
 //					addScore(dices, player, category, score_board);
 //				}
-//
-//			}
+
+			}
 		}
 		
 		calculateUpperBonus(score_board);
