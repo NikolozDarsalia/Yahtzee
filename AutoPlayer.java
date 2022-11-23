@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class AutoPlayer implements YahtzeeConstants {
 	
@@ -126,8 +127,13 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
-		ArrayList<ArrayList <Integer>> selecteds = (ArrayList) dict.keySet();
-		return getMaxExpectedValueSelection(dict, selecteds, tries_remained);
+		Set<ArrayList <Integer>> set_selecteds = dict.keySet();
+		ArrayList<ArrayList <Integer>>  arr = new ArrayList<>(set_selecteds);
+		for (ArrayList<Integer> i : set_selecteds) {
+			arr.add(i);
+		}
+            
+		return getMaxExpectedValueSelection(dict, arr, tries_remained);
 	
 	}
 	
