@@ -27,10 +27,14 @@ public class AutoPlayer implements YahtzeeConstants {
 		int category = isLower()[0];
 		int score = isLower()[1];
 		if(category != -1) {
-			return noProblemDices(category, score);
+			ArrayList<Integer> selected_dices = noProblemDices(category, score);
+			return selected_dices;
 		}else {
-			return chooseByExpectedValues(tries);
+			ArrayList<Integer> selected_dices = chooseByExpectedValues(tries);
+			return selected_dices;
 		}
+		
+		
 		
 	}
 	
