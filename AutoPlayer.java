@@ -89,7 +89,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			if(category >= THREE_OF_A_KIND && category < CHANCE) {
 				category_logic = new CategoryLogic(dices, category);
 				int score = category_logic.getScore();
-				if(score > score_old) {
+				if(score >= score_old) {
 					cat = category;
 					score_old = score;
 				}
