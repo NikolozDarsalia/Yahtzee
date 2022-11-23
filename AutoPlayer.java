@@ -33,7 +33,11 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	
+	/* aq gasaweria roca arcert kategoriashi ar jdeba mashin ra qnas.
+	 * yvelaze dabali matematikuri molodini rasac eqneba calke funcqiad
+	 * rom gavitano matematikuri molodinebi remained categoriebshi da 
+	 * mag kategorias avirchev romlisac yvelaze dabali iqneba. 
+	 * */
 	public int selectCategory() {
 		int prev_score = 0;
 		int answer = 0;
