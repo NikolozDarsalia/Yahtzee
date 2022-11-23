@@ -110,13 +110,15 @@ public class AutoPlayer implements YahtzeeConstants {
 								int score = category_logic.getScore();
 								
 								 Map<Integer, Integer> scores_p = dict.get(selected_dices);
-								
+								 Integer p = dict.get(selected_dices).get(score);
 								if(score > 0) {
 									if (scores_p == null) {
 										dict.put(selected_dices, new HashMap<>());
 										dict.get(selected_dices).put(score, 1);
-									}else {
+									}else if (p == 0) {
 										dict.get(selected_dices).put(score, 1);
+									}else {
+										dict.get(selected_dices).put(score, p + 1);
 									}
 								}
 								
