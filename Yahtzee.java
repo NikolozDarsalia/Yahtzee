@@ -75,7 +75,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
 				
-				if (against_computer == 1 && player == 2) {
+//				if (against_computer == 1 && player == 2) {
 					display.printMessage(playerNames[player-1] + "'s turn!");
 					int[] dices = firstTry();
 					
@@ -88,24 +88,24 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 					addScore(dices, player, category, score_board);
 					
 					
-				}else {
-					display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
-					display.waitForPlayerToClickRoll(player);
-					int[] dices = firstTry();
-					
-					for(int x = 1; x < 3; x++) {
-						if(hasSelected(dices)){
-							changeResults(dices);
-						}else {
-							break;
-						}
-					}
-					
-					int category = display.waitForPlayerToSelectCategory();
-					addScore(dices, player, category, score_board);
-				}
-
-			}
+//				}else {
+//					display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
+//					display.waitForPlayerToClickRoll(player);
+//					int[] dices = firstTry();
+//					
+//					for(int x = 1; x < 3; x++) {
+//						if(hasSelected(dices)){
+//							changeResults(dices);
+//						}else {
+//							break;
+//						}
+//					}
+//					
+//					int category = display.waitForPlayerToSelectCategory();
+//					addScore(dices, player, category, score_board);
+//				}
+//
+//			}
 		}
 		
 		calculateUpperBonus(score_board);
