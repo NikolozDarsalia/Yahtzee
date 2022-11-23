@@ -7,16 +7,18 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	private int[] dices = new int[6];
 	private int tries;
+	private int player;
 	private int[][] score_board;
 	private CategoryLogic category_logic;
 	
 	
 	
 	/* This is the AutoPlayer constructor */
-	public AutoPlayer(int[] dices, int tries, int[][] score_board) {
+	public AutoPlayer(int[] dices, int tries, int[][] score_board, int player) {
 		this.dices = dices;
 		this.tries = tries;
 		this.score_board = score_board;
+		this.player = player;
 	}
 	
 	
