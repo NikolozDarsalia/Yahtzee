@@ -66,7 +66,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		ArrayList <Integer> remained_categories = new ArrayList<Integer>();
 		
 		for(int category = 1; category <= CHANCE; category++) {
-			if(category != UPPER_SCORE || category != UPPER_BONUS) {
+			if(category != UPPER_SCORE && category != UPPER_BONUS) {
 				if(score_board[player -1][category-1] == Integer.MIN_VALUE) {
 					remained_categories.add(category);
 				}
