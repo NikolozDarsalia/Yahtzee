@@ -77,8 +77,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				
 //				if (against_computer == 1 && player == 2) {
 					display.printMessage(playerNames[player-1] + "'s turn!");
-					int[] dices = firstTry();
-					
+//					int[] dices = firstTry();
+					int[] dices = {4,4,4,5,6};
 					for(int tries = 2; tries > 0; tries --) {
 						pause(10000);
 						auto = new AutoPlayer(dices, tries, score_board, player);
