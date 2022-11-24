@@ -50,10 +50,14 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
+		int total = 0;
 		for(int i = 0; i < 100000; i++) {
 			playGame(score_board, against_computer);
-			fillScoreBoard(score_board);
+			total += score_board[0][TOTAL - 1];
 		}
+		
+		double avg = (double) total/100000;
+		System.out.println(avg);
 		
 	}
 	
