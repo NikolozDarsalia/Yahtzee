@@ -83,7 +83,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
-	private int[] isLower(){
+	private int isLower(){
 		int cat = -1;
 		int score_old = 0;
 		
@@ -97,11 +97,10 @@ public class AutoPlayer implements YahtzeeConstants {
 				}
 			}
 		}
+
 		if(score_old == 0) cat = -1;
-		System.out.println(cat);
-		int[] result = {cat,score_old};
-		
-		return result;
+
+		return cat;
 	}
 	
 	
