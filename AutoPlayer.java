@@ -98,6 +98,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
+		System.out.println(cat);
 		int[] result = {cat,score_old};
 		
 		return result;
@@ -221,7 +222,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			category_logic = new CategoryLogic(copy_dices, category);
 			
 			int new_score = category_logic.getScore();
-			System.out.println(category);
+			
 			if(new_score > 0) {
 				no_prob.add(i);
 			}
