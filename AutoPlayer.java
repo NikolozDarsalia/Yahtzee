@@ -224,6 +224,9 @@ public class AutoPlayer implements YahtzeeConstants {
 			for(int x = i; x <= dices.length; x++) {
 				copy_dices[i-1] = -1;
 				copy_dices[x-1] = -1;
+				for(int dice : copy_dices) System.out.println(dice);
+				System.out.println("\n");
+				
 				category_logic = new CategoryLogic(copy_dices, category);
 				
 				int new_score = category_logic.getScore();
@@ -236,8 +239,7 @@ public class AutoPlayer implements YahtzeeConstants {
 						}
 						no_prob.add(i);
 					}else { 
-						for(int dice : copy_dices) System.out.println(dice);
-						System.out.println("\n");
+						
 //						System.out.println(i + "\n" + x + "\n" + new_score + "\n\n");
 						no_prob.clear();
 						no_prob.add(i);
