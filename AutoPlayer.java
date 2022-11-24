@@ -225,7 +225,7 @@ public class AutoPlayer implements YahtzeeConstants {
 				
 				int new_score = category_logic.getScore();
 				if(new_score > 0) {
-					if(x != i) 
+					if(x == i) 
 						no_prob.add(i);
 					else { 
 						no_prob.add(i);
