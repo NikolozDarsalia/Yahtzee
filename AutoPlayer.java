@@ -99,7 +99,8 @@ public class AutoPlayer implements YahtzeeConstants {
 		}
 
 		if(score_old == 0) cat = -1;
-
+		
+		System.out.println(cat);
 		return cat;
 	}
 	
