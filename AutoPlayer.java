@@ -52,7 +52,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			category_logic = new CategoryLogic(dices, category);
 			int score = category_logic.getScore();
 			if(score >= prev_score) {
-				if(!(score == prev_score && category == CHANCE && category <= SIXES)) {
+				if(!(score == prev_score && (category == CHANCE || category <= SIXES))) {
 					answer = category;
 					prev_score = score;
 				}
