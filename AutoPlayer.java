@@ -224,12 +224,13 @@ public class AutoPlayer implements YahtzeeConstants {
 				category_logic = new CategoryLogic(copy_dices, category);
 				
 				int new_score = category_logic.getScore();
-				
 				if(new_score > 0) {
-					no_prob.add(i);
+					if(x == i) no_prob.add(i);
+					else if(new_score == ) {
+					copy_dices[i-1] = dices[i-1];
+					}
 				}
-				copy_dices[i-1] = dices[i-1];
-			}
+			
 		}
 		
 		return no_prob;
