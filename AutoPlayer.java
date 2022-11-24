@@ -28,9 +28,9 @@ public class AutoPlayer implements YahtzeeConstants {
 
 		if(category != -1) {
 			ArrayList<Integer> selected_dices = noProblemDices(category);
-			for(int dice : selected_dices) {
-				System.out.println(dice);
-			}
+//			for(int dice : selected_dices) {
+//				System.out.println(dice);
+//			}
 			return selected_dices;
 		}else {
 			ArrayList<Integer> selected_dices = chooseByExpectedValues(tries);
