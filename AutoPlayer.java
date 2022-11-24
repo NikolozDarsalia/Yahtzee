@@ -225,10 +225,10 @@ public class AutoPlayer implements YahtzeeConstants {
 				
 				int new_score = category_logic.getScore();
 				if(new_score > 0) {
-					if(x == i) no_prob.add(i);
-					else if(new_score == ) {
-					copy_dices[i-1] = dices[i-1];
-					}
+					if(x == i) 
+						no_prob.add(i);
+					else 
+						copy_dices[i-1] = dices[i-1];
 				}
 			
 		}
