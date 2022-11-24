@@ -236,7 +236,7 @@ public class AutoPlayer implements YahtzeeConstants {
 					}	
 				}
 				
-				copy_dices = dices;
+				copy_dices[i-1] = dices[i-1];
 			}
 		}
 		
