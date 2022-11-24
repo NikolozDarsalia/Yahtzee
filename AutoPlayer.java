@@ -24,7 +24,7 @@ public class AutoPlayer implements YahtzeeConstants {
 
 
 	public ArrayList <Integer> selectDices() {
-		int category = isLower()[0];
+		int category = isLower();
 
 		if(category != -1) {
 			ArrayList<Integer> selected_dices = noProblemDices(category);
