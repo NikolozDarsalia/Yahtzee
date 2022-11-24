@@ -232,8 +232,12 @@ public class AutoPlayer implements YahtzeeConstants {
 						no_prob.add(x);
 					}	
 				}
+				
+				copy_dices = dices;
 			}
 		}
+		
+		
 		
 		return no_prob;
 		
