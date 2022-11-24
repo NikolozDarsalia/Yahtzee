@@ -264,14 +264,14 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	private int[] deepCopyOfDices() {
-		int[] copy_dices = new int[6];
+		int[] copy_dices = new int[5];
 		
 		for(int i = 1; i <= dices.length; i++) {
 			copy_dices[i-1] = dices[i-1];
 		}
 		
-//		for(int dice : copy_dices)
-			System.out.println(dices.length);
+		for(int dice : copy_dices)
+			System.out.println(dice);
 		System.out.println("\n");
 		
 		return copy_dices;
