@@ -237,6 +237,7 @@ public class AutoPlayer implements YahtzeeConstants {
 						no_prob.add(i);
 					}else { 
 						for(int dice : copy_dices) System.out.println(dice);
+						System.out.println("\n");
 //						System.out.println(i + "\n" + x + "\n" + new_score + "\n\n");
 						no_prob.clear();
 						no_prob.add(i);
