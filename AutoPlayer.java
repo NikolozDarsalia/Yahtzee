@@ -225,8 +225,7 @@ public class AutoPlayer implements YahtzeeConstants {
 				copy_dices[i-1] = -1;
 				copy_dices[x-1] = -1;
 				
-				for(int dice : copy_dices) System.out.println(dice);
-				System.out.println("\n");
+				
 				
 				category_logic = new CategoryLogic(copy_dices, category);
 				
@@ -252,6 +251,10 @@ public class AutoPlayer implements YahtzeeConstants {
 				
 				copy_dices[i-1] = dices[i-1];
 				copy_dices[x-1] = dices[x-1];
+				
+				for(int dice : copy_dices) System.out.println(dice);
+				System.out.println("\n");
+				
 			}
 		}
 		
