@@ -251,8 +251,6 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
-		
-		
 		return no_prob;
 		
 	}
