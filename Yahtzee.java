@@ -60,7 +60,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		double avg = (double) total/100000;
 		
-		
+		double stDev = 0;
+		for(int score : totals) {
+			stDev += Math.pow(score - avg, 2);
+		}
 		System.out.println(avg);
 		
 	}
