@@ -219,7 +219,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	private ArrayList<Integer> noProblemDices(int category) {
 		ArrayList<Integer> no_prob = new ArrayList<Integer>();
 		int[] copy_dices = deepCopyOfDices();
-// {1,2,3,4,5}
+// {-1,3,3,2,-1}
 		for(int i = 1; i <= dices.length; i++) {
 			for(int x = i; x <= dices.length; x++) {
 				copy_dices[i-1] = -1;
