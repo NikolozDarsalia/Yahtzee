@@ -227,8 +227,9 @@ public class AutoPlayer implements YahtzeeConstants {
 				category_logic = new CategoryLogic(copy_dices, category);
 				
 				int new_score = category_logic.getScore();
-				System.out.println(i + "\n" + x + "\n" + new_score + "\n\n");
+				
 				if(new_score > 0) {
+					System.out.println(i + "\n" + x + "\n" + new_score + "\n\n");
 					if(x == i) {
 						if(no_prob.size() == 1) {
 							no_prob.clear();
