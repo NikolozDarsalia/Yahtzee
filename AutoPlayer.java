@@ -229,13 +229,14 @@ public class AutoPlayer implements YahtzeeConstants {
 				int new_score = category_logic.getScore();
 				
 				if(new_score > 0) {
-					System.out.println(i + "\n" + x + "\n" + new_score + "\n\n");
+					
 					if(x == i) {
 						if(no_prob.size() == 1) {
 							no_prob.clear();
 						}
 						no_prob.add(i);
 					}else { 
+						System.out.println(i + "\n" + x + "\n" + new_score + "\n\n");
 						no_prob.clear();
 						no_prob.add(i);
 						no_prob.add(x);
