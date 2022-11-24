@@ -53,7 +53,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		ArrayList<Integer> totals = new ArrayList<Integer>();
 		int total = 0;
 		for(int i = 0; i < 100000; i++) {
-			playGame(score_board, against_computer);
+			score_board = playGame(score_board, against_computer);
 			System.out.println(score_board);
 			total += score_board[0][TOTAL - 1];
 			totals.add(score_board[0][TOTAL - 1]);
