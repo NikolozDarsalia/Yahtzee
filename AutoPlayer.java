@@ -183,7 +183,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 	
 		}
-		
+		System.out.println(final_dices.get(0));
 		return final_dices;
 		
 	}
