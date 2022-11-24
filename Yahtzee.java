@@ -80,13 +80,15 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 //					int[] dices = firstTry();
 					int[] dices = {2,2,2,6,5};
 					display.displayDice(dices);
+					
 					for(int tries = 2; tries > 0; tries --) {
 						pause(10000);
-						auto = new AutoPlayer(dices, tries, score_board, player);
+						AutoPlayer auto = new AutoPlayer(dices, tries, score_board, player);
 						dices = changeResultsAuto(dices, auto.selectDices());
 					}
 					
 					pause(10000);
+					AutoPlayer auto = new AutoPlayer(dices, 0, score_board, player);
 					int category = auto.selectCategory();
 					addScore(dices, player, category, score_board);
 					
@@ -125,7 +127,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	private String[] playerNames;
 	private YahtzeeDisplay display;
 	private RandomGenerator rgen = new RandomGenerator();
-	private AutoPlayer auto;
+//	private AutoPlayer auto;
 	private int[][] score_board;
 	private CategoryLogic category_logic;
 	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
