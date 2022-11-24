@@ -50,7 +50,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-		playGame(score_board, against_computer);
+		for(int i = 0; i < 100000; i++) {
+			playGame(score_board, against_computer);
+			fillScoreBoard(score_board);
+		}
 		
 	}
 	
