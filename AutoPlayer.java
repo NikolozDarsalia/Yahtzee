@@ -224,6 +224,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			for(int x = i; x <= dices.length; x++) {
 				copy_dices[i-1] = -1;
 				copy_dices[x-1] = -1;
+				
 				for(int dice : copy_dices) System.out.println(dice);
 				System.out.println("\n");
 				
