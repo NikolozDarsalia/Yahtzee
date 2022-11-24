@@ -239,6 +239,7 @@ public class AutoPlayer implements YahtzeeConstants {
 							no_prob.clear();
 						}
 						no_prob.add(i);
+						
 					}else { 
 						no_prob.clear();
 						no_prob.add(i);
