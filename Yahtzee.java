@@ -353,13 +353,19 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			}
 		}
 	}
+
 	
 	
-	/* Finally, after the calculation of final bonuses, final scores will be visible
+
+	/*
+	 *  Finally, after the calculation of final bonuses, final scores will be visible
 	 * on canvas and in score_board matrix, and this method will print the message
 	 * about which player won the game. The winner will be a player, who has firstly
 	 * received the maximum score. 
-	 * */
+	 * 
+	 * 
+	 * @param score_board
+	 */
 	private void isWinner(int[][] score_board) {
 		int total_score = 0;
 		int winner = 0;
