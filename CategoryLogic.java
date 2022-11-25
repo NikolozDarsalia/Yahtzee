@@ -166,6 +166,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * 
 	 * @param n
 	 * 
+	 * 
 	 * @return integer value -  (n-1) * 10, If there are n neighbor values in sorted massive, 
 	 * 						where every next value is 1 point greater then previous one, 
 	 * 						else 0.
