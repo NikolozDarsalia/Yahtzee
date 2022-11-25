@@ -48,6 +48,18 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * which are equals to category number selected by player.
 	 * For example, category number 1 is for ones, number 2 for twos, etc. 
 	 * */
+	
+	/**
+	 * 
+	 * 
+	 * @param dices
+	 *  		massive of 5 integer values - each of them from 1 to 6.
+	 *  
+	 * @param category
+	 * 			integer value of category.
+	 * 
+	 * @return
+	 */
 	private int upperCategoryScore(int[] dices, int category) {
 		int score = 0;
 		for(int dice: dices) {
