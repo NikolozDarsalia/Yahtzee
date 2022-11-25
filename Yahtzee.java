@@ -201,6 +201,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * values. This method gives that matrix the beginning form to start filling of it.
 	 * after this method, all the values of matrix will be equal to Integer.MIN_VALUE. 
 	 * 
+	 * 
 	 * @param score_board
 	 * 			Massive of integer's massive.
 	 * 
