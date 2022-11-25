@@ -2,7 +2,7 @@ import acm.util.ErrorException;
 
 public class CategoryLogic implements YahtzeeConstants{
 	
-	private int[] dices = new int[6];
+	private int[] dices = new int[N_DICE];
 	private int category;
 	
 	/* This is the CategoryLogic constructor */
