@@ -169,7 +169,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * and adds it on canvas. 
 	 * 
 	 * @param dices
-	 * 			massive of 6 integer values - each of them from 1 to 6.
+	 * 			massive of 5 integer values - each of them from 1 to 6.
 	 */
 	private void changeResults(int[] dices) {
 		for(int n = 1; n <= dices.length; n++) {
