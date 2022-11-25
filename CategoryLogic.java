@@ -21,6 +21,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * (Dices massive and category number are instances variables of this class,
 	 * which will get their meaning in Yahtzee class by constructor).
 	 * 
+	 * 
 	 * @return integer value of score by category.
 	 */
 	public int getScore() {
