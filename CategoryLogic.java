@@ -87,7 +87,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 *	 		massive of 5 integer values - each of them from 1 to 6.
 	 * 
 	 * @param n
-	 * 			integer variable - describes how many 
+	 * 			integer value - describes how many 
 	 * 
 	 * @return integer value - value which is repeated n times in a dices
 	 * 		                 massive. If none of values is repeated n times,
