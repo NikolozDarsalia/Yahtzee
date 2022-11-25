@@ -58,7 +58,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			while(true) {
 				if(!(nPlayers > 1 && nPlayers <=4)) {
 					nPlayers = dialog.readInt("Enter number of players (Max 4)");
-				}
+				}else 
+					break;	
 			}
 		}
 		
