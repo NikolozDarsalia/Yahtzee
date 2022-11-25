@@ -51,8 +51,16 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			against_computer = dialog.readInt("\"Enter 1 if you want to play agains computer, or write 0, if you don't want.\"")
 		}
 		
-		if(against_computer == 1) nPlayers = 2;
-		else nPlayers = dialog.readInt("Enter number of players");
+		if(against_computer == 1) {
+			nPlayers = 2;
+		}else {
+			while(true) {
+				if(!(nPlayers > 1 && nPlayers <=4)) {
+					nPlayers = dialog.readInt("Enter number of players");
+				}
+			}
+		}
+		
 		
 		playerNames = new String[nPlayers];
 		
