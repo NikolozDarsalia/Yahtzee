@@ -194,10 +194,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	}
 	
 	
-	/* This method is created for forStraight method. It needs a massive typed
-	 * argument and returns ascending sorted version of it. For that selection
-	 * sorting algorithm is used. 
-	 * */
+	
 	/**
 	 * This method is created for forStraight method and it sorts dices massive
 	 * by selection sorting algorithm.
