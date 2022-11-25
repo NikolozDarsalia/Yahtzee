@@ -89,7 +89,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * @param n
 	 * 			integer variable - describes how many 
 	 * 
-	 * @return
+	 * @return integer value 
 	 * 
 	 */
 	private int nOfAKind(int[] dices, int n) {
