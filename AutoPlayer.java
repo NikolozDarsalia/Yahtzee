@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class AutoPlayer implements YahtzeeConstants {
 	
-	private int[] dices = new int[6];
+	private int[] dices = new int[5];
 	private int tries;
 	private int player;
 	private int[][] score_board;
