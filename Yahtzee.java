@@ -193,21 +193,18 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	
-	/* score_board matrix is an instance variable and its size is generated in 
+	/**
+	 * score_board matrix is an instance variable and its size is generated in 
 	 * playGame method to control scores of players, it contains 17 rows 
 	 * and its number of columns depends on number of players.
 	 * Its rows contain categories, upper bonus, upper and lower scores and total score
 	 * values. This method gives that matrix the beginning form to start filling of it.
-	 * after this method, all the values of matrix will be equal to Integer.MIN_VALUE.  
-	 * */
-	/**
-	 * 
+	 * after this method, all the values of matrix will be equal to Integer.MIN_VALUE. 
 	 * 
 	 * @param score_board
 	 * 			Massive of integer's massive.
 	 * 
-	 * @return
+	 * @return score_board matrix, which is filled by Integer.MIN_VALUEs.
 	 */
 	private int[][] fillScoreBoard(int[][] score_board){
 		for(int player = 1; player <= nPlayers; player++) {
