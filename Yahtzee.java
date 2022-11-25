@@ -342,7 +342,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 
 	/**
-	 *  After the gameOver() method will return true, this method will calculate
+	 * After the gameOver() method will return true, this method will calculate
 	 * if the sum of upper category values is more than 62, or not for each player,
 	 * if it's more than 62, this method will add upper bonus for a player on canvas
 	 * and also in score_board matrix.
@@ -363,7 +363,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 
 	/*
-	 *  Finally, after the calculation of final bonuses, final scores will be visible
+	 * Finally, after the calculation of final bonuses, final scores will be visible
 	 * on canvas and in score_board matrix, and this method will print the message
 	 * about which player won the game. The winner will be a player, who has
 	 * received the maximum score.
