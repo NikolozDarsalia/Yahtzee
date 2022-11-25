@@ -69,7 +69,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	
 	
-	/* This method describes the progress of the game. Until the result
+	/* This method describes the progress of the game. It has two scenarios,
+	 * game between players and game between a player and the computer.
+	 * If against_computer variable is equals two 1, the second scenario will run,
+	 * in other case there will be first scenario. Until the result
 	 * of gameOver method is false, each player have a first try and then two
 	 * chances to change the result of randomly generated dices,
 	 * if they don't select any dices on their second try, 
