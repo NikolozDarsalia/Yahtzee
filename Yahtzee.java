@@ -134,7 +134,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	/**
 	 * After a player click the roll button this method
 	 * will generate massive with five random integer values from
-	 * 1 to 6, shows it as dices on the canvas and returns it as a massive. 
+	 * 1 to 6 and shows it as dices on the canvas. 
 	 * 
 	 * @return massive of five random integer values from 1 to 6.
 	 *  
