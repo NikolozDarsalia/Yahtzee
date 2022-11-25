@@ -205,6 +205,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 			Massive of integer's massive.
 	 * 
 	 * @return score_board matrix, which is filled by Integer.MIN_VALUEs.
+	 * 
 	 */
 	private int[][] fillScoreBoard(int[][] score_board){
 		for(int player = 1; player <= nPlayers; player++) {
