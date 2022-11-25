@@ -25,6 +25,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * 
 	 * 
 	 * @return integer value of score by category.
+	 * 
 	 */
 	public int getScore() {
 		int score = 0;
