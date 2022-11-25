@@ -52,11 +52,12 @@ public class AutoPlayer implements YahtzeeConstants {
 					answer = category;
 					prev_score = score;
 				}
+			}
 		}
 		
 		if( answer == 0) {
 			category_logic = new CategoryLogic(dices, CHANCE);
-			score = category_logic.getScore();
+			int score = category_logic.getScore();
 			
 			if(score > 0) answer = CHANCE;
 			else answer = remainedCategories().get(0);
