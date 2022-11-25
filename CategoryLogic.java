@@ -18,6 +18,9 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * After selection of a category, this method will check if 
 	 * the value of dices is appropriate to the selected category.
 	 * 
+	 * (Dices massive and category number are instances variables of this class,
+	 * which will get their meaning in Yahtzee class by constructor).
+	 * 
 	 * @return integer value of score by category.
 	 */
 	public int getScore() {
