@@ -14,10 +14,10 @@ import acm.util.*;
 public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	public static void main(String[] args) {
-		
-		
+			
 		new Yahtzee().start(args);
 	}
+	
 	
 	/* Private instance variables */
 	private int nPlayers;
@@ -67,6 +67,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	
 	}
 
+	
 	
 	/* This method describes the progress of the game. Until the result
 	 * of gameOver method is false, each player have a first try and then two
