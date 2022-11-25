@@ -136,7 +136,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * will generate massive with five random integer values from
 	 * 1 to 6 and shows it as dices on the canvas. 
 	 * 
-	 * @return massive of five random integer values from 1 to 6.
+	 * @return massive of five random integer values from 1 to 6 (dices).
 	 *  
 	 */
 	private int[] firstTry() {
