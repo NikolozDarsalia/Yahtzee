@@ -50,29 +50,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-		ArrayList<Integer> totals = new ArrayList<Integer>();
-		int total = 0;
-		for(int i = 0; i < 100000; i++) {
-			score_board = playGame(score_board, against_computer);
-			System.out.println(score_board[0][TOTAL - 1]);
-			total += score_board[0][TOTAL - 1];
-			totals.add(score_board[0][TOTAL - 1]);
-		}
-		
-		double avg = (double) total/100000;
-		
-		double stDev = 0;
-		for(int score : totals) {
-			stDev += Math.pow(score - avg, 2);
-		}
-		
-		stDev = Math.sqrt(stDev / 100000);
-		System.out.println("Average = " + avg + "\n" + "Standard Deviation = " + stDev);
+		playGame(score_board, against_computer);
 		
 	}
-	
-
-	
 
 	
 	/* This method describes the progress of the game. Until the result
