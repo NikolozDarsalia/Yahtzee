@@ -50,8 +50,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		display = new YahtzeeDisplay(getGCanvas(), playerNames);
 		
-		playGame(score_board, against_computer);
-		
+		for(int i = 0; i <= 1000; i++) {
+			int[][] board = playGame(score_board, against_computer);
+			System.out.println(board[0][TOTAL-1]);
+		}
 	}
 
 	
@@ -65,7 +67,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * will calculate upper bonuses, then final total scores of players and 
 	 * finally, prints the name of winner.
 	 * */
-	private void playGame(int[][] score_board, int against_computer) {
+	private int[][] playGame(int[][] score_board, int against_computer) {
 		score_board = new int[nPlayers][N_CATEGORIES];
 		fillScoreBoard(score_board);
 		
@@ -113,7 +115,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateTotal(score_board);
 		isWinner(score_board);
 		rsr_sound.play();
-		
+		return score_board;
 	}
 	
 	
