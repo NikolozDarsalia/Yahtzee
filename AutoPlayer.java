@@ -233,6 +233,16 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param new_dices
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private ArrayList<Integer> selectedDices(int[] new_dices){
 		ArrayList<Integer> selected_dices = new ArrayList<Integer>();
 		
@@ -244,7 +254,15 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
-	
+	/**
+	 * 
+	 * 
+	 * @param new_dices
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private int[] newDices(int[] new_dices) {
 		for(int i = 1; i <= new_dices.length; i++) {
 			if(new_dices[i-1] == 0)	new_dices[i-1] = dices[i-1];
@@ -255,6 +273,15 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param category
+	 * 
+	 * @return
+	 * 
+	 */
 	private ArrayList<Integer> noProblemDices(int category) {
 		ArrayList<Integer> no_prob = new ArrayList<Integer>();
 		int[] copy_dices = deepCopyOfDices();
@@ -296,6 +323,12 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
+	/**
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private int[] deepCopyOfDices() {
 		int[] copy_dices = new int[N_DICE];
 		
