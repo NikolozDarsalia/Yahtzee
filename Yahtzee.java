@@ -144,11 +144,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		display.displayDice(dices);
 		return dices;
 	}
-	
-	
-	/* , if there is any selected dices
-	 * method's result is true, in other case the result is false.
-	 *  */
+
+
 	
 	/**
 	 * After the first try, player has an option to select dices, which
@@ -159,7 +156,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * @param dices
 	 * 			massive of 5 integer values - each of them from 1 to 6.
 	 * 
-	 * @return 
+	 * @return true - there are any selected dices,
+	 * 		   false - in other situation.
 	 * 
 	 */
 	private boolean hasSelected(int[] dices) {
