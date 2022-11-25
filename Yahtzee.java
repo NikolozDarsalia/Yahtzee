@@ -204,7 +204,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 			massive of 5 integer values - each of them from 1 to 6.
 	 * 
 	 * @param selected_dices
-	 * 			ArrayList of integers values - each of them discribes index of 
+	 * 			ArrayList of integers values - each of them describes index of 
 	 * 		dice, which will be changed.
 	 * 
 	 * @return	massive of 5 integer values - updated massive. 
