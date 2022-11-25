@@ -221,6 +221,23 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * sum of player's upper and lower scores and total score 
 	 * will be changed in score_board matrix and also adds on canvas.
 	 * */
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param dices
+	 * 			massive of 6 integer values - final version of dices. 
+	 *
+	 * @param player
+	 * 			integer value - player number.
+	 * 
+	 * @param category
+	 * 			integer value - category number.
+	 * 
+	 * @param score_board
+	 * 			Massive of integer's massive.
+	 */
 	private void addScore(int[] dices, int player, int category, int[][] score_board) {
 
 		while(score_board[player - 1][category - 1] != Integer.MIN_VALUE) {
@@ -251,6 +268,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 
 	 * 
 	 * @param score_board
+	 * 			Massive of integer's massive.
 	 */
 	private void calculateTotal(int[][] score_board) {
 		
