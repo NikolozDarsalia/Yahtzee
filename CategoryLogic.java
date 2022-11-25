@@ -71,19 +71,16 @@ public class CategoryLogic implements YahtzeeConstants{
 	}
 	
 	
-	/* This method checks if any kinds of value is repeated n times in 
-	 * a dices massive. If any kinds of value is repeated n times in a massive,
-	 * method will return the value, which will be repeated n times, 
-	 * in other situation,
-	 * the result will be 0. 
-	 * This method is for Three of a Kind, Four of a Kind and Yatzee categories.
+	
+	
+	/**
+	 * This method checks if any kinds of value is repeated n times in 
+	 * a dices massive. 
+	 * 
+	 * It's for Three of a Kind, Four of a Kind and Yatzee categories.
 	 * In first two of them, getScore method will return sum of all 5 values.
 	 * Yatzee means that all five dices have same values and the result in this case
 	 * will be fixed 50, not sum of all values.
-	 * */
-	
-	/**
-	 * 
 	 * 
 	 * 
 	 * @param dices
