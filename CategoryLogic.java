@@ -18,6 +18,12 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * by a logic of selected category. In other case, result of 
 	 * this method will be 0. 
 	 * */
+	
+	/**
+	 * 
+	 * 
+	 * @return
+	 */
 	public int getScore() {
 		int score = 0;
 		
