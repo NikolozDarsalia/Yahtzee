@@ -330,7 +330,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 			Massive of integer's massive.
 	 * 
 	 * @return	true - if every cell of score_board is filled,
-	 * 			false - 
+	 * 			false - in other case.
 	 * 		
 	 */
 	private boolean gameOver(int[][] score_board) {
