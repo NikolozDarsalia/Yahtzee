@@ -47,9 +47,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		
 		IODialog dialog = getDialog();
 		
-		int against_computer = dialog.readInt("Enter 1 if you want to play against computer, or write 0, if you don't want.");
+		int against_computer = dialog.readInt("Enter 1 if you want to play against computer, or write 0.");
 		while(against_computer != 1 && against_computer != 0) {
-			against_computer = dialog.readInt("\"Enter 1 if you want to play against computer, or write 0, if you don't want.\"");
+			against_computer = dialog.readInt("Enter 1 if you want to play against computer, or write 0.");
 		}
 		
 		if(against_computer == 1) {
