@@ -59,7 +59,7 @@ public class AutoPlayer implements YahtzeeConstants {
 			category_logic = new CategoryLogic(dices, CHANCE);
 			int score = category_logic.getScore();
 			
-			if(score > 0) answer = CHANCE;
+			if(score > 0 && score_board[player - 1][CHANCE - 1] == Integer.MIN_VALUE) answer = CHANCE;
 			else answer = remainedCategories().get(0);
 			
 		}
