@@ -56,12 +56,7 @@ public class AutoPlayer implements YahtzeeConstants {
 		}
 		
 		if( answer == 0) {
-			category_logic = new CategoryLogic(dices, CHANCE);
-			int score = category_logic.getScore();
-			
-			if(score > 0 && score_board[player - 1][CHANCE - 1] == Integer.MIN_VALUE) answer = CHANCE;
-			else answer = remainedCategories().get(0);
-			
+			answer = remainedCategories().get(0);
 		}
 		
 		return answer;
@@ -72,7 +67,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	private ArrayList <Integer>  remainedCategories() {
 		ArrayList <Integer> remained_categories = new ArrayList<Integer>();
 		
-		for(int category = 1; category < CHANCE; category++) {
+		for(int category = 1; category <= CHANCE; category++) {
 			if(category != UPPER_SCORE && category != UPPER_BONUS) {
 				if(score_board[player - 1][category - 1] == Integer.MIN_VALUE) {
 					remained_categories.add(category);
