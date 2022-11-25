@@ -123,6 +123,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * 
 	 * 
 	 * @param dices
+	 * 			massive of 5 integer values - each of them from 1 to 6.
 	 * 
 	 * @return integer value - 25, if the massive of dices is full house,
 	 * 						else 0.
