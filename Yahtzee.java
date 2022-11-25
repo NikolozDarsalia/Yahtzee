@@ -366,7 +366,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * Finally, after the calculation of final bonuses, final scores will be visible
 	 * on canvas and in score_board matrix, and this method will print the message
 	 * about which player won the game. The winner will be a player, who has
-	 * received the maximum score. 
+	 * received the maximum score. If there are two or more players with same score,
+	 * there will be a message on canvas that the result is draw. 
 	 * 
 	 * 
 	 * @param score_board
