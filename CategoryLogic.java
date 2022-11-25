@@ -81,6 +81,20 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * Yatzee means that all five dices have same values and the result in this case
 	 * will be fixed 50, not sum of all values.
 	 * */
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param dices
+	 * 
+	 * 
+	 * @param n
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private int nOfAKind(int[] dices, int n) {
 		int count = 0;
 		
