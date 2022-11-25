@@ -197,7 +197,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	/**
-	 * 
+	 * This method is for auto player. after the first try, auto player 
+	 * will calculate, which dice's values will be changed. 
 	 * 
 	 * 
 	 * @param dices
