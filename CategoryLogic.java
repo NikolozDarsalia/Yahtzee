@@ -232,6 +232,17 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * This method is also used for three of a kind or four of a kind cases in
 	 * getScore method. 
 	 * */
+	/**
+	 * Chance is the last category of the game. It sums all five values of dices massive.
+	 * This method is also used for three of a kind and four of a kind cases in
+	 * getScore method. 
+	 * 
+	 * @param dices
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private int chance(int[] dices) {
 		int score = 0;
 		for(int dice: dices) {
