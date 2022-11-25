@@ -69,7 +69,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	
 	
-	/* This method describes the progress of the game. It has two scenarios,
+	/**
+	 * This method describes the progress of the game. It has two scenarios,
 	 * game between players and game between a player and the computer.
 	 * If against_computer variable is equals two 1, the second scenario will be ran,
 	 * in other case there will be first scenario. 
@@ -82,9 +83,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * them. After the gameOver method will return true, this method  
 	 * will calculate upper bonuses, then final total scores of players add this results
 	 * on canvas and finally, prints the name of winner.
-	 * */
-	
-	/**
 	 * 
 	 * 
 	 * @param score_board
