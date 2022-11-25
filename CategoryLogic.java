@@ -11,18 +11,13 @@ public class CategoryLogic implements YahtzeeConstants{
 		this.category = category;
 	}
 	
-	
-	/* After selection of a category, this method will check if 
-	 * the value of dices is appropriate to the selected category.
-	 * If answer is positive, method will return generated score 
-	 * by a logic of selected category. In other case, result of 
-	 * this method will be 0. 
-	 * */
+
 	
 	/**
+	 * After selection of a category, this method will check if 
+	 * the value of dices is appropriate to the selected category.
 	 * 
-	 * 
-	 * @return
+	 * @return integer value of score by category.
 	 */
 	public int getScore() {
 		int score = 0;
