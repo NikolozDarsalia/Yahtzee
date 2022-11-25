@@ -21,8 +21,14 @@ public class AutoPlayer implements YahtzeeConstants {
 		this.player = player;
 	}
 
+	
 
-
+	/**
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	public ArrayList <Integer> selectDices() {
 		int category = isLower();
 
@@ -40,6 +46,13 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * rom gavitano matematikuri molodinebi remained categoriebshi da 
 	 * mag kategorias avirchev romlisac yvelaze dabali iqneba. 
 	 * */
+	
+	/**
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	public int selectCategory() {
 		int prev_score = 0;
 		int answer = 0;
@@ -64,6 +77,12 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
+	/**
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private ArrayList <Integer>  remainedCategories() {
 		ArrayList <Integer> remained_categories = new ArrayList<Integer>();
 		
@@ -79,6 +98,12 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
+	/**
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private int isLower(){
 		int cat = -1;
 		int score_old = 0;
@@ -101,6 +126,15 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	
+	/**
+	 * 
+	 * 
+	 * @param tries_remained
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
 	private ArrayList<Integer> chooseByExpectedValues(int tries_remained) {
 		
 		Map< ArrayList<Integer>, Map<Integer, Integer> > dict = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
@@ -152,7 +186,20 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 					
-					
+	/**
+	 * 
+	 * 		
+	 * @param dict
+	 * 
+	 * 
+	 * @param selecteds
+	 * 
+	 * 
+	 * @param tries_remained
+	 * 
+	 * @return
+	 * 
+	 */
 	private ArrayList<Integer> getMaxExpectedValueSelection(Map< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<ArrayList <Integer>> selecteds, int tries_remained){
 
 		ArrayList<Integer> final_dices = new ArrayList<Integer>();
