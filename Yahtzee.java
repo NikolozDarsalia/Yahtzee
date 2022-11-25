@@ -63,7 +63,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			}
 		}
 		
-		
 		playerNames = new String[nPlayers];
 		
 		for (int i = 1; i <= nPlayers; i++) {
