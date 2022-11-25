@@ -146,11 +146,22 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* After the first try, player has an option to select dices, which
-	 * they want to change. This method checks if there is any selected dices,
-	 * after the player enters to roll again button, if there is any selected dices
+	/* , if there is any selected dices
 	 * method's result is true, in other case the result is false.
 	 *  */
+	
+	/**
+	 * After the first try, player has an option to select dices, which
+	 * they want to change. This method checks if there is any selected dices,
+	 * after the player enters to roll again button.
+	 * 
+	 * 
+	 * @param dices
+	 * 			massive of 5 integer values - each of them from 1 to 6.
+	 * 
+	 * @return 
+	 * 
+	 */
 	private boolean hasSelected(int[] dices) {
 		display.waitForPlayerToSelectDice();
 		for(int n = 1; n <= dices.length; n++) {
