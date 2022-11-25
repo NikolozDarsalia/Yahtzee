@@ -196,6 +196,20 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		display.displayDice(dices);
 	}
 	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param dices
+	 * 			massive of 5 integer values - each of them from 1 to 6.
+	 * 
+	 * @param selected_dices
+	 * 			ArrayList of integers values - each of them discribes index of 
+	 * 		dice, which will be changed.
+	 * 
+	 * @return
+	 * 
+	 */
 	
 	private int[] changeResultsAuto(int[] dices, ArrayList<Integer> selected_dices) {
 		for(int dice_n : selected_dices) {
@@ -249,7 +263,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 
 	 * 
 	 * @param dices
-	 * 			massive of 6 integer values - final version of dices. 
+	 * 			massive of 5 integer values - final version of dices. 
 	 *
 	 * @param player
 	 * 			integer value - player number.
