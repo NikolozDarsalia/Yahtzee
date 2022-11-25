@@ -45,7 +45,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	
 	
 	/**
-	 * This method is for upper categories. It sums values,
+	 * This method is for upper categories. It sums values of the dicees,
 	 * which are equals to category number selected by player.
 	 * For example, category number 1 is for ones, number 2 for twos, etc. 
 	 * 
@@ -72,9 +72,9 @@ public class CategoryLogic implements YahtzeeConstants{
 	
 	
 	/* This method checks if any kinds of value is repeated n times in 
-	 * a dices massive. It has two arguments - massive of dices and integer argument
-	 * n. If any kinds of value is repeated n times in a massive,
-	 * method will return the value, which will be repeated n times, in other situation,
+	 * a dices massive. If any kinds of value is repeated n times in a massive,
+	 * method will return the value, which will be repeated n times, 
+	 * in other situation,
 	 * the result will be 0. 
 	 * This method is for Three of a Kind, Four of a Kind and Yatzee categories.
 	 * In first two of them, getScore method will return sum of all 5 values.
@@ -87,10 +87,10 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * 
 	 * 
 	 * @param dices
-	 * 
+	 *	 		massive of 5 integer values - each of them from 1 to 6.
 	 * 
 	 * @param n
-	 * 
+	 * 			integer variable - describes how many 
 	 * 
 	 * @return
 	 * 
