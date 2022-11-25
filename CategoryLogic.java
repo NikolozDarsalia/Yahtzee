@@ -161,6 +161,23 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * then previous one, method will return (n-1) * 10, in other case,
 	 * result will be 0.
 	 * */
+	/**
+	 * There are two categories about straight - small and and large straight.
+	 * First of them means that there are 4 straight values in a massive,
+	 * second - all 5 values are straight. 
+	 * This method checks if n values are in a straight in dices massive. For
+	 * that it uses sorter method, which is described below.
+	 * 
+	 * 
+	 * @param dices
+	 * 
+	 * @param n
+	 * 
+	 * @return integer value -  (n-1) * 10, If there are n neighbor values in sorted massive, 
+	 * 						where every next value is 1 point greater then previous one, 
+	 * 						else 0.
+	 * 
+	 */
 	private int forStraight(int[] dices, int n) {
 		int count = 1;
 		int [] sorted_dices = sorter(dices);
