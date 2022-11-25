@@ -302,6 +302,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * full house, small straight, large straight, yahtzee and chance.
 	 * finally, lower scores will add on canvas and write into score_board.
 	 * */
+	
+	
 	private void calculateLowerScore(int[][] score_board) {
 		
 		for(int player = 1; player <= nPlayers; player++) {
