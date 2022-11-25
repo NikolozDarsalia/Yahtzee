@@ -115,11 +115,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	}
 	
 	
-	/* Full House means that there are only two kinds of values, one of them
-	 * is repeated three times and another one - two times. This method checks if
-	 * the massive of dices is full house, if it's right than the result will be
-	 * 25 point, if it's not - 0. 
-	 * */
+	
 	/**
 	 * Full House means that there are only two kinds of values, one of them
 	 * is repeated three times and another one - two times. 
