@@ -112,8 +112,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		calculateUpperBonus(score_board);
 		calculateTotal(score_board);
 		isWinner(score_board);
-//		rsr_sound.play();
-		return score_board;
+		rsr_sound.play();
+
 	}
 	
 	
@@ -141,7 +141,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			dices[n-1] = value;
 		}
 		
-//		display.displayDice(dices);
+		display.displayDice(dices);
 		return dices;
 	}
 	
@@ -152,7 +152,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * method's result is true, in other case the result is false.
 	 *  */
 	private boolean hasSelected(int[] dices) {
-//		display.waitForPlayerToSelectDice();
+		display.waitForPlayerToSelectDice();
 		for(int n = 1; n <= dices.length; n++) {
 			if (display.isDieSelected(n-1)) {
 				return true;
@@ -175,7 +175,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 			}
 		}
 		
-//		display.displayDice(dices);
+		display.displayDice(dices);
 	}
 	
 	
@@ -187,7 +187,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}
 		
 		
-//		display.displayDice(dices);
+		display.displayDice(dices);
 		
 		return dices;
 	}
@@ -230,7 +230,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		category_logic = new CategoryLogic(dices, category);
 		int score = category_logic.getScore();
 		
-//		display.updateScorecard(category, player, score);
+		display.updateScorecard(category, player, score);
 		score_board[player - 1][category - 1] = score;
 		
 		calculateTotal(score_board);
@@ -263,7 +263,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				}
 			}
 			score_board[player - 1][TOTAL - 1] = total;
-//			display.updateScorecard(TOTAL, player, total);
+			display.updateScorecard(TOTAL, player, total);
 		}
 		
 	}
@@ -289,7 +289,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				
 			}
 			score_board[player - 1][UPPER_SCORE - 1] = total;
-//			display.updateScorecard(UPPER_SCORE, player, total);
+			display.updateScorecard(UPPER_SCORE, player, total);
 		}
 	}
 	
@@ -315,7 +315,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				
 			}
 			score_board[player - 1][LOWER_SCORE - 1] = total;
-//			display.updateScorecard(LOWER_SCORE, player, total);
+			display.updateScorecard(LOWER_SCORE, player, total);
 		}
 		
 	}
@@ -354,7 +354,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		for(int player = 1; player <= nPlayers; player++) {
 			if(score_board[player-1][UPPER_SCORE - 1] >= 63) {
 				score_board[player-1][UPPER_BONUS - 1] = 35;
-//				display.updateScorecard(UPPER_BONUS, player, 35);
+				display.updateScorecard(UPPER_BONUS, player, 35);
 			}
 		}
 	}
@@ -382,7 +382,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 				winner = player;
 			}
 		}
-//		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
+		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
 		
 	}
 	
