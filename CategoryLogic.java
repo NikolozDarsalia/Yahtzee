@@ -121,6 +121,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * is repeated three times and another one - two times. 
 	 * This method checks if the massive of dices is full house.
 	 * 
+	 * 
 	 * @param dices
 	 * 
 	 * @return integer value - 25, if the massive of dices is full house,
