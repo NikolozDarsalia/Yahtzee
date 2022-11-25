@@ -206,7 +206,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * @param dices
 	 * 			massive of 5 integer values - each of them from 1 to 6.
 	 * 
-	 * @return 
+	 * @return massive of 5 integer values - ascending sorted version of dices massive.
 	 * 
 	 */
 	private int[] sorter(int[] dices) {
