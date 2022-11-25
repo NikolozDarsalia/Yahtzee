@@ -89,13 +89,10 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * on canvas and finally, prints the name of winner.
 	 * 
 	 * 
-	 * @param score_board
-	 * 			Massive of integer's massive.
-	 * 
 	 * @param against_computer
 	 * 			integer value.
 	 */
-	private void playGame(int[][] score_board, int against_computer) {
+	private void playGame(int against_computer) {
 		score_board = new int[nPlayers][N_CATEGORIES];
 		fillScoreBoard(score_board);
 		
