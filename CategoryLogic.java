@@ -43,13 +43,11 @@ public class CategoryLogic implements YahtzeeConstants{
 	}
 	
 	
-	/* This method is for upper categories. It needs two argument - 
-	 * massive of dices and category number and returns sum of values,
-	 * which are equals to category number selected by player.
-	 * For example, category number 1 is for ones, number 2 for twos, etc. 
-	 * */
 	
 	/**
+	 * This method is for upper categories. It sums values,
+	 * which are equals to category number selected by player.
+	 * For example, category number 1 is for ones, number 2 for twos, etc. 
 	 * 
 	 * 
 	 * @param dices
