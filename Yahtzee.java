@@ -366,7 +366,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * Finally, after the calculation of final bonuses, final scores will be visible
 	 * on canvas and in score_board matrix, and this method will print the message
 	 * about which player won the game. The winner will be a player, who has
-	 * received the maximum score.
+	 * received the maximum score. 
 	 * 
 	 * 
 	 * @param score_board
@@ -374,15 +374,23 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 
 	 */
 	private void isWinner(int[][] score_board) {
-		int total_score = 0;
+		int total_score = -1;
 		int winner = 0;
+		boolean is_draw = false;
+		
 		for(int player = 1; player <= nPlayers; player++) {
-			if (score_board[player-1][TOTAL-1] > total_score) {
+			if(score_board[player-1][TOTAL-1] == total_score) {
+				is_draw = true;
+				display.printMessage("Draw!");
+			}else if (score_board[player-1][TOTAL-1] > total_score) {
 				total_score = score_board[player-1][TOTAL-1];
 				winner = player;
 			}
 		}
-		display.printMessage("The winner is " + playerNames[winner - 1] + "!");
+		
+		if(is_draw == false) {
+			display.printMessage("The winner is " + playerNames[winner - 1] + "!");
+		}
 		
 	}
 	
