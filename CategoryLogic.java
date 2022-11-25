@@ -56,7 +56,8 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * @param category
 	 * 			integer value of category.
 	 * 
-	 * @return
+	 * @return integer value - score of specific upper category.
+	 * 
 	 */
 	private int upperCategoryScore(int[] dices, int category) {
 		int score = 0;
