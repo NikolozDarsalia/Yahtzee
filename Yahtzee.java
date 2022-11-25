@@ -92,40 +92,39 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		while(!gameOver(score_board)) {
 			for(int player = 1; player <= nPlayers; player++) {
 				
-//				if (against_computer == 1 && player == 2) {
-//					display.printMessage(playerNames[player-1] + "'s turn!");
+				if (against_computer == 1 && player == 2) {
+					display.printMessage(playerNames[player-1] + "'s turn!");
 					int[] dices = firstTry();
-//					int[] dices = {1,2,3,4,5}; 
-//					display.displayDice(dices);
+
 					
 					for(int tries = 2; tries > 0; tries --) {
-//						pause(3000);
+
 						auto = new AutoPlayer(dices, tries, score_board, player);
 						dices = changeResultsAuto(dices, auto.selectDices());
 					}
 					
-//					pause(3000);
+
 					auto = new AutoPlayer(dices, 0, score_board, player);
 					int category = auto.selectCategory();
 					addScore(dices, player, category, score_board);
 					
 					
-//				}else {
-//					display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
-//					display.waitForPlayerToClickRoll(player);
-//					int[] dices = firstTry();
-//					
-//					for(int x = 1; x < 3; x++) {
-//						if(hasSelected(dices)){
-//							changeResults(dices);
-//						}else {
-//							break;
-//						}
-//					}
-//					
-//					int category = display.waitForPlayerToSelectCategory();
-//					addScore(dices, player, category, score_board);
-//				}
+				}else {
+					display.printMessage(playerNames[player-1] + "'s turn! Click \"Roll Dice\" button to roll the dice.");
+					display.waitForPlayerToClickRoll(player);
+					int[] dices = firstTry();
+					
+					for(int x = 1; x < 3; x++) {
+						if(hasSelected(dices)){
+							changeResults(dices);
+						}else {
+							break;
+						}
+					}
+					
+					int category = display.waitForPlayerToSelectCategory();
+					addScore(dices, player, category, score_board);
+				}
 
 			}
 		}
