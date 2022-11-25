@@ -93,7 +93,8 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * 			integer variable - describes how many 
 	 * 
 	 * @return integer value - value which is repeated n times in a dices
-	 * 		                  massive. 
+	 * 		                 massive. If none of values is repeated n times,
+	 * 						 then returns 0.
 	 * 
 	 */
 	private int nOfAKind(int[] dices, int n) {
