@@ -126,7 +126,7 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * 			massive of 5 integer values - each of them from 1 to 6.
 	 * 
 	 * @return integer value - 25, if the massive of dices is full house,
-	 * 						else 0.
+	 * 		  				  else 0.
 	 */
 	private int fullHouse(int[] dices) {
 		int three_of_a_kind = nOfAKind(dices, 3);
