@@ -364,7 +364,9 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * received the maximum score. 
 	 * 
 	 * 
-	 * @param score_board
+	 * @param score_board 
+	 * 			Massive of integer's massive.
+	 * 
 	 */
 	private void isWinner(int[][] score_board) {
 		int total_score = 0;
