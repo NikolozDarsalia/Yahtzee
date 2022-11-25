@@ -79,6 +79,16 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * will calculate upper bonuses, then final total scores of players and 
 	 * finally, prints the name of winner.
 	 * */
+	
+	/**
+	 * 
+	 * 
+	 * @param score_board
+	 * 			Massive of integer's massive.
+	 * 
+	 * @param against_computer
+	 * 			
+	 */
 	private void playGame(int[][] score_board, int against_computer) {
 		score_board = new int[nPlayers][N_CATEGORIES];
 		fillScoreBoard(score_board);
