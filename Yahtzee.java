@@ -293,17 +293,19 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		}
 	}
 	
-	
-	/* This method calculates sum of lower category scores for each player
+
+	/**
+	 * This method calculates sum of lower category scores for each player
 	 * after a player gets a score for selected category.
 	 * In calculation won't be included Integer.MIN_VALUE scores, because
 	 * it's kinds of scores means that this category hasn't filled yet.
 	 * Lower categories are: three of a kind, four of a kind,
 	 * full house, small straight, large straight, yahtzee and chance.
 	 * finally, lower scores will add on canvas and write into score_board.
-	 * */
-	
-	
+	 * 
+	 * 
+	 * @param score_board
+	 */
 	private void calculateLowerScore(int[][] score_board) {
 		
 		for(int player = 1; player <= nPlayers; player++) {
