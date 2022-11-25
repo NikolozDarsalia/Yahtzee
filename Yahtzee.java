@@ -210,20 +210,16 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	}
 	
 	
-	/* after the final dices will be generated, player needs to select
-	 * category to earn scores. This method needs 4 arguments - final version of dices 
-	 * massive, player number, category number, and matrix of score's board
-	 * and it checks if the values of dices are appropriate for selected category.
-	 * If answer is positive, player will get score by the logic of specific category,
+	/**
+	 * after the final dices will be generated, player needs to select
+	 * category to earn scores. This method checks if the values of dices
+	 * are appropriate for selected category. If answer is positive, 
+	 * player will get score by the logic of specific category,
 	 * in other situation, the score will be 0. 
 	 * Each player doesn't have an option to choose same categories again. 
 	 * Finally, after this function, player's score for selected category, 
 	 * sum of player's upper and lower scores and total score 
 	 * will be changed in score_board matrix and also adds on canvas.
-	 * */
-	
-	/**
-	 * 
 	 * 
 	 * 
 	 * @param dices
