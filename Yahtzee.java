@@ -378,8 +378,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	
 	
-
-	/*
+	/**
 	 * Finally, after the calculation of final bonuses, final scores will be visible
 	 * on canvas and in score_board matrix, and this method will print the message
 	 * about which player won the game. The winner will be a player, who has
@@ -389,7 +388,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 
 	 * @param score_board
 	 * 			Massive of integer's massive.
-	 * 
 	 */
 	private void isWinner(int[][] score_board) {
 		int total_score = -1;
