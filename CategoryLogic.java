@@ -121,11 +121,14 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * 25 point, if it's not - 0. 
 	 * */
 	/**
-	 * 
+	 * Full House means that there are only two kinds of values, one of them
+	 * is repeated three times and another one - two times. 
+	 * This method checks if the massive of dices is full house.
 	 * 
 	 * @param dices
 	 * 
-	 * @return
+	 * @return integer value - 25, if the massive of dices is full house,
+	 * 						else 0.
 	 */
 	private int fullHouse(int[] dices) {
 		int three_of_a_kind = nOfAKind(dices, 3);
