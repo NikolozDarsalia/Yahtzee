@@ -19,6 +19,19 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 		new Yahtzee().start(args);
 	}
 	
+	/* Private instance variables */
+	private int nPlayers;
+	private String[] playerNames;
+	private YahtzeeDisplay display;
+	private RandomGenerator rgen = new RandomGenerator();
+	private AutoPlayer auto;
+	private int[][] score_board;
+	private CategoryLogic category_logic;
+	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
+	private AudioClip rsr_start = MediaTools.loadAudioClip("rsr_start.au");
+	
+	
+	
 	
 	/* In run method, user inputs the number of players and then 
 	 * the names of the players in dialog bar, until the YahtzeeDisplay graphics
@@ -116,18 +129,6 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 
 	}
 	
-	
-		
-/* Private instance variables */
-	private int nPlayers;
-	private String[] playerNames;
-	private YahtzeeDisplay display;
-	private RandomGenerator rgen = new RandomGenerator();
-	private AutoPlayer auto;
-	private int[][] score_board;
-	private CategoryLogic category_logic;
-	private AudioClip rsr_sound = MediaTools.loadAudioClip("Rsr.au");
-	private AudioClip rsr_start = MediaTools.loadAudioClip("rsr_start.au");
 	
 
 	
