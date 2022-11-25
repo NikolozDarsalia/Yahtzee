@@ -279,6 +279,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 
 	 * 
 	 * @param score_board
+	 * 			Massive of integer's massive.
 	 */
 	private void calculateUpperScore(int[][] score_board) {
 		
