@@ -348,6 +348,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * and also in score_board matrix.
 	 * 
 	 * @param score_board
+	 * 			Massive of integer's massive.
 	 */
 	private void calculateUpperBonus(int[][] score_board) {
 		for(int player = 1; player <= nPlayers; player++) {
@@ -368,7 +369,7 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * received the maximum score.
 	 * 
 	 * 
-	 * @param score_board 
+	 * @param score_board
 	 * 			Massive of integer's massive.
 	 * 
 	 */
