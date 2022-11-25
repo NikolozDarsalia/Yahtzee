@@ -198,6 +198,17 @@ public class CategoryLogic implements YahtzeeConstants{
 	 * argument and returns ascending sorted version of it. For that selection
 	 * sorting algorithm is used. 
 	 * */
+	/**
+	 * This method is created for forStraight method and it sorts dices massive
+	 * by selection sorting algorithm.
+	 * 
+	 * 
+	 * @param dices
+	 * 			massive of 5 integer values - each of them from 1 to 6.
+	 * 
+	 * @return 
+	 * 
+	 */
 	private int[] sorter(int[] dices) {
 		
 		for(int i = 1; i < dices.length; i++) {
