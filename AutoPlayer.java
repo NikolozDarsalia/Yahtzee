@@ -132,6 +132,74 @@ public class AutoPlayer implements YahtzeeConstants {
 	/**
 	 * 
 	 * 
+	 * 
+	 * @param category
+	 * 
+	 * @return
+	 * 
+	 */
+	private ArrayList<Integer> noProblemDices(int category) {
+		ArrayList<Integer> no_prob = new ArrayList<Integer>();
+		int[] copy_dices = deepCopyOfDices();
+
+		for(int i = 1; i <= dices.length; i++) {
+			for(int x = i; x <= dices.length; x++) {
+				copy_dices[i-1] = -1;
+				copy_dices[x-1] = -1;
+				
+				category_logic = new CategoryLogic(copy_dices, category);
+				
+				int new_score = category_logic.getScore();
+				
+				if(new_score > 0) {
+					
+					if(x == i) {
+						if(no_prob.size() == 1) {
+							no_prob.clear();
+						}
+						no_prob.add(i);
+						
+					}else { 
+						no_prob.clear();
+						no_prob.add(i);
+						no_prob.add(x);
+						
+						return no_prob;
+					}	
+				}
+				
+				copy_dices = deepCopyOfDices();
+				
+			}
+		}
+		
+		return no_prob;
+		
+	}
+	
+	
+	
+	/**
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
+	private int[] deepCopyOfDices() {
+		int[] copy_dices = new int[N_DICE];
+		
+		for(int i = 1; i <= dices.length; i++) {
+			copy_dices[i-1] = dices[i-1];
+		}
+		
+		return copy_dices;
+	}
+	
+	
+	
+	/**
+	 * 
+	 * 
 	 * @param tries_remained - integer value, which describes the number of remained tries
 	 * 						 for computer.
 	 * 
@@ -276,73 +344,6 @@ public class AutoPlayer implements YahtzeeConstants {
 		return new_dices;
 	}
 	
-	
-	
-	/**
-	 * 
-	 * 
-	 * 
-	 * @param category
-	 * 
-	 * @return
-	 * 
-	 */
-	private ArrayList<Integer> noProblemDices(int category) {
-		ArrayList<Integer> no_prob = new ArrayList<Integer>();
-		int[] copy_dices = deepCopyOfDices();
-
-		for(int i = 1; i <= dices.length; i++) {
-			for(int x = i; x <= dices.length; x++) {
-				copy_dices[i-1] = -1;
-				copy_dices[x-1] = -1;
-				
-				category_logic = new CategoryLogic(copy_dices, category);
-				
-				int new_score = category_logic.getScore();
-				
-				if(new_score > 0) {
-					
-					if(x == i) {
-						if(no_prob.size() == 1) {
-							no_prob.clear();
-						}
-						no_prob.add(i);
-						
-					}else { 
-						no_prob.clear();
-						no_prob.add(i);
-						no_prob.add(x);
-						
-						return no_prob;
-					}	
-				}
-				
-				copy_dices = deepCopyOfDices();
-				
-			}
-		}
-		
-		return no_prob;
-		
-	}
-	
-	
-	
-	/**
-	 * 
-	 * 
-	 * @return
-	 * 
-	 */
-	private int[] deepCopyOfDices() {
-		int[] copy_dices = new int[N_DICE];
-		
-		for(int i = 1; i <= dices.length; i++) {
-			copy_dices[i-1] = dices[i-1];
-		}
-		
-		return copy_dices;
-	}
 	
 	
 }
