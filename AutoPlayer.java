@@ -137,7 +137,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * 
 	 * @param category - integer value (category number).
 	 * 
-	 * @return
+	 * @return ArrayList of integer values, each of them describes dices, which can be 
+	 * randomised. 
 	 * 
 	 */
 	private ArrayList<Integer> noProblemDices(int category) {
