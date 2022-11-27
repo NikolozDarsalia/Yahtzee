@@ -204,7 +204,10 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * If the answer of isLower method is -1, then noProblemDices method
 	 * will not be appropriate to randomise specific dices and this method will be used. 
 	 * This method looks at any possible changes that might happen in next tries. First of
-	 * all, it calculates 
+	 * all, it counts specific scores probabilities for each selection of dices, then calculates
+	 * expected values from the view of selected dices and finally, get the list of dices that
+	 * will be randomised, which expected value will be maximum.
+	 * 
 	 * 
 	 * @param tries_remained - integer value, which describes the number of remained tries
 	 * 						 for computer.
