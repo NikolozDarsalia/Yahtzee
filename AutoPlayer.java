@@ -213,7 +213,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * 						 for computer.
 	 * 
 	 * 
-	 * @return
+	 * @return ArrayList of integer values - dices that will be randomised.
 	 * 
 	 */
 	private ArrayList<Integer> chooseByExpectedValues(int tries_remained) {
