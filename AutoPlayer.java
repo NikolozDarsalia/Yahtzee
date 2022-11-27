@@ -28,8 +28,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * after first tries of computer. It calculates which dices might be
 	 * changed to get more score.
 	 * 
-	 * @return ArrayList of integers, each of them describes, which dice will
-	 * change.
+	 * @return ArrayList of integers, each of them describes which dice will
+	 * 		be changed.
 	 * 
 	 */
 	public ArrayList <Integer> selectDices() {
