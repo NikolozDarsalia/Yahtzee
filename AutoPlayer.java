@@ -104,8 +104,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * This method checks if the existing value of dices are appropriate for
 	 * any lower categories (without chance). 
 	 * 
-	 * @return
-	 * 
+	 * @return integer value - category number, if the answer of this method is positive,
+	 * 						   -1, if the dices is not appropriate for any lower categories.
 	 */
 	private int isLower(){
 		int cat = -1;
