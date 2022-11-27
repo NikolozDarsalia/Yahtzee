@@ -53,7 +53,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	/**
 	 * This public method is used after all three tries of computer. It selects
 	 * the category, which will get the maximum score based on the final dices
-	 * 
+	 * of tries. 
 	 * 
 	 * @return
 	 * 
