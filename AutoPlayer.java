@@ -295,7 +295,9 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	/**
-	 * 
+	 * This method rewrite real values on the dices
+	 * which will be equal to 0, in the chooseByExpectedValues
+	 * method.
 	 * 
 	 * @param new_dices
 	 * 
