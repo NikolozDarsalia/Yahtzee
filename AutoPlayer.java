@@ -138,7 +138,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 */
 	private ArrayList<Integer> chooseByExpectedValues(int tries_remained) {
 		
-		Map< ArrayList<Integer>, Map<Integer, Integer> > dict = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
+		Map< ArrayList<Integer>, Map<Integer, Integer> > probabilities_map = new HashMap< ArrayList<Integer>, Map<Integer, Integer> >();  
 		
 		for(int category : remainedCategories()) {
 	
@@ -156,16 +156,16 @@ public class AutoPlayer implements YahtzeeConstants {
 								category_logic = new CategoryLogic(new_dices, category);
 								int score = category_logic.getScore();
 								
-								Map<Integer, Integer> scores_p = dict.get(selected_dices);
+								Map<Integer, Integer> scores_p = probabilities_map.get(selected_dices);
 								
 								if(score > 0) {
 									if (scores_p == null) {
-										dict.put(selected_dices, new HashMap<>());
-										dict.get(selected_dices).put(score, 1);
-									}else if (dict.get(selected_dices).get(score) == null) {
-										dict.get(selected_dices).put(score, 1);
+										probabilities_map.put(selected_dices, new HashMap<>());
+										probabilities_map.get(selected_dices).put(score, 1);
+									}else if (probabilities_map.get(selected_dices).get(score) == null) {
+										probabilities_map.get(selected_dices).put(score, 1);
 									}else {
-										dict.get(selected_dices).put(score, dict.get(selected_dices).get(score) + 1);
+										probabilities_map.get(selected_dices).put(score, probabilities_map.get(selected_dices).get(score) + 1);
 									}
 								}
 								
@@ -176,13 +176,13 @@ public class AutoPlayer implements YahtzeeConstants {
 			}
 		}
 		
-		Set<ArrayList <Integer>> set_selecteds = dict.keySet();
+		Set<ArrayList <Integer>> set_selecteds = probabilities_map.keySet();
 		ArrayList<ArrayList <Integer>>  arr = new ArrayList<>(set_selecteds);
 		for (ArrayList<Integer> i : set_selecteds) {
 			arr.add(i);
 		}
             
-		return getMaxExpectedValueSelection(dict, arr, tries_remained);
+		return getMaxExpectedValueSelection(probabilities_map, arr, tries_remained);
 	
 	}
 	
@@ -191,7 +191,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	/**
 	 * 
 	 * 		
-	 * @param dict
+	 * @param probabilities_map
 	 * 
 	 * 
 	 * @param selecteds
@@ -202,7 +202,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * @return
 	 * 
 	 */
-	private ArrayList<Integer> getMaxExpectedValueSelection(Map< ArrayList<Integer>, Map<Integer, Integer> > dict, ArrayList<ArrayList <Integer>> selecteds, int tries_remained){
+	private ArrayList<Integer> getMaxExpectedValueSelection(Map< ArrayList<Integer>, Map<Integer, Integer> > probabilities_map, ArrayList<ArrayList <Integer>> selecteds, int tries_remained){
 
 		ArrayList<Integer> final_dices = new ArrayList<Integer>();
 		double max_expected_value = 0;
@@ -210,9 +210,9 @@ public class AutoPlayer implements YahtzeeConstants {
 		for(ArrayList <Integer> selected_dices : selecteds) {
 			double expected_value = 0;
 			
-			for(int score : dict.get(selected_dices).keySet()) {
-				double probability_non = 1 - (double) dict.get(selected_dices).get(score) / Math.pow(6, selected_dices.size());
-				double probability = (double) dict.get(selected_dices).get(score) / Math.pow(6, selected_dices.size());
+			for(int score : probabilities_map.get(selected_dices).keySet()) {
+				double probability_non = 1 - (double) probabilities_map.get(selected_dices).get(score) / Math.pow(6, selected_dices.size());
+				double probability = (double) probabilities_map.get(selected_dices).get(score) / Math.pow(6, selected_dices.size());
 				if(tries_remained == 2) {
 					expected_value += score * (probability + probability * probability_non);
 				}else {
