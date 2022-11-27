@@ -328,7 +328,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * @param probabilities_map 
 	 * 
 	 * 
-	 * @param selecteds
+	 * @param selecteds - ArrayList of integer's ArrayList - each list describes each version of 
+	 * 					selected dices.
 	 * 
 	 * 
 	 * @param tries_remained
