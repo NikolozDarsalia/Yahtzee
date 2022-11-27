@@ -299,7 +299,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * which will be equal to 0, in the chooseByExpectedValues
 	 * method.
 	 * 
-	 * @param new_dices
+	 * @param new_dices - massive of integers (dices), where unselected dices
+	 * 					are equal to 0.
 	 * 
 	 * 
 	 * @return
