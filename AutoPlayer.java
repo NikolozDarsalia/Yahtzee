@@ -270,7 +270,9 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	/**
-	 * 
+	 * In chooseByExpectedValues method, dices massive is shown as 0s for the 
+	 * dices, which is not selected. This method gets the selected dices by 
+	 * that logic. 
 	 * 
 	 * 
 	 * @param new_dices
