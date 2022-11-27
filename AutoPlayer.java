@@ -183,6 +183,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	/**
+	 * This method makes a deep copy of dices massive,
 	 * 
 	 * 
 	 * @return
