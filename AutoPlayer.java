@@ -53,9 +53,10 @@ public class AutoPlayer implements YahtzeeConstants {
 	/**
 	 * This public method is used after all three tries of computer. It selects
 	 * the category, which will get the maximum score based on the final dices
-	 * of tries. 
+	 * of tries. If value of dices is not appropriate for any categories, answer of this
+	 * method will be the first available category.
 	 * 
-	 * @return
+	 * @return integer value - category number.
 	 * 
 	 */
 	public int selectCategory() {
