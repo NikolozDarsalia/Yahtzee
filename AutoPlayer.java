@@ -101,7 +101,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	/**
-	 * 
+	 * This method checks if the existing value of dices are appropriate for
+	 * any lower categories (without chance). 
 	 * 
 	 * @return
 	 * 
