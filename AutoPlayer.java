@@ -132,7 +132,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	/**
 	 * If the answer of isLower method is not -1, this method will be ran. 
 	 * It finds dices, which will not be necessary for get the category returned
-	 * by isLower method.
+	 * by isLower method. 
 	 * 
 	 * 
 	 * @param category
