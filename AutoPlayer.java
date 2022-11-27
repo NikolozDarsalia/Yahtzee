@@ -24,7 +24,9 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 
 	/**
-	 * 
+	 * This is a public method of AutoPlayer class, which is used
+	 * after first tries of computer. It calculates which dices might be
+	 * changed to get more score.
 	 * 
 	 * @return
 	 * 
