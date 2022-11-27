@@ -224,6 +224,7 @@ public class AutoPlayer implements YahtzeeConstants {
 						for(int second = 0; second <= 6; second++) {
 							
 							for(int first = 1; first <= 6; first++) {
+								
 								int[] new_dices = {first, second, third, fourth, fifth};
 								ArrayList<Integer> selected_dices = selectedDices(new_dices);
 								
