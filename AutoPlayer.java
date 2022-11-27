@@ -205,7 +205,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * will not be appropriate to randomise specific dices and this method will be used. 
 	 * This method looks at any possible changes that might happen in next tries. First of
 	 * all, it counts specific scores probabilities for each selection of dices, then calculates
-	 * expected values from the view of selected dices and finally, get the list of dices, which 
+	 * expected values for each version of selected dices and finally, get the list of dices, which 
 	 * expected value will be maximum.
 	 * 
 	 * 
@@ -321,7 +321,7 @@ public class AutoPlayer implements YahtzeeConstants {
 					
 	/**
 	 * This is a supporting method for chooseByExpectedValues, which calculates 
-	 * expected values from the view of selected dices and then finds the version
+	 * expected values for each version of selected dices and then finds the version
 	 * of dices selection, that will have the maximum expected value. 
 	 * 
 	 * 
