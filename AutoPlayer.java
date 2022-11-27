@@ -206,7 +206,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * This method looks at any possible changes that might happen in next tries. First of
 	 * all, it counts specific scores probabilities for each selection of dices, then calculates
 	 * expected values from the view of selected dices and finally, get the list of dices, which 
-	 * expected value will be maximum and these dices will be randomise. 
+	 * expected value will be maximum and these dices will be randomised. 
 	 * 
 	 * 
 	 * @param tries_remained - integer value, which describes the number of remained tries
