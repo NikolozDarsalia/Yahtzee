@@ -336,7 +336,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * 						 for computer.
 	 * 
 	 * 
-	 * @return
+	 * @return ArrayList of integers (dices), which will be randomised.
 	 * 
 	 */
 	private ArrayList<Integer> getMaxExpectedValueSelection(Map< ArrayList<Integer>, Map<Integer, Integer> > probabilities_map, ArrayList<ArrayList <Integer>> selecteds, int tries_remained){
