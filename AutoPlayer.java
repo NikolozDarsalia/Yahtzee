@@ -268,6 +268,47 @@ public class AutoPlayer implements YahtzeeConstants {
 	}
 	
 	
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param new_dices
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
+	private ArrayList<Integer> selectedDices(int[] new_dices){
+		ArrayList<Integer> selected_dices = new ArrayList<Integer>();
+		
+		for(int i = 1; i <= new_dices.length; i++) {
+			if(new_dices[i-1] != 0)	selected_dices.add(i);
+		}
+		
+		return selected_dices;
+	}
+	
+	
+	
+	/**
+	 * 
+	 * 
+	 * @param new_dices
+	 * 
+	 * 
+	 * @return
+	 * 
+	 */
+	private int[] newDices(int[] new_dices) {
+		for(int i = 1; i <= new_dices.length; i++) {
+			if(new_dices[i-1] == 0)	new_dices[i-1] = dices[i-1];
+		}
+		
+		return new_dices;
+	}
+	
+	
 					
 	/**
 	 * This is a supporting method for chooseByExpectedValues, which calculates 
@@ -315,47 +356,6 @@ public class AutoPlayer implements YahtzeeConstants {
 		
 		return final_dices;
 		
-	}
-		
-	
-	
-	
-	/**
-	 * 
-	 * 
-	 * 
-	 * @param new_dices
-	 * 
-	 * 
-	 * @return
-	 * 
-	 */
-	private ArrayList<Integer> selectedDices(int[] new_dices){
-		ArrayList<Integer> selected_dices = new ArrayList<Integer>();
-		
-		for(int i = 1; i <= new_dices.length; i++) {
-			if(new_dices[i-1] != 0)	selected_dices.add(i);
-		}
-		
-		return selected_dices;
-	}
-	
-	
-	/**
-	 * 
-	 * 
-	 * @param new_dices
-	 * 
-	 * 
-	 * @return
-	 * 
-	 */
-	private int[] newDices(int[] new_dices) {
-		for(int i = 1; i <= new_dices.length; i++) {
-			if(new_dices[i-1] == 0)	new_dices[i-1] = dices[i-1];
-		}
-		
-		return new_dices;
 	}
 	
 	
