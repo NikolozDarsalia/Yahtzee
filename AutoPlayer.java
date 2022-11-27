@@ -183,10 +183,9 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	/**
-	 * This method makes a deep copy of dices massive,
+	 * This method makes a deep copy of dices massive.
 	 * 
-	 * 
-	 * @return
+	 * @return massive of integers - deep copy of dices massive.
 	 * 
 	 */
 	private int[] deepCopyOfDices() {
