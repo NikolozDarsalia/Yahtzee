@@ -135,7 +135,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * by isLower method. 
 	 * 
 	 * 
-	 * @param category
+	 * @param category - integer value (category number).
 	 * 
 	 * @return
 	 * 
