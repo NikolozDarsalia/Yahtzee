@@ -303,7 +303,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * 					are equal to 0.
 	 * 
 	 * 
-	 * @return
+	 * @return massive of integers - real dices massive.
 	 * 
 	 */
 	private int[] newDices(int[] new_dices) {
