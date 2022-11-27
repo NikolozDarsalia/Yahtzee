@@ -223,8 +223,11 @@ public class AutoPlayer implements YahtzeeConstants {
 		for(int category : remainedCategories()) {
 	
 			for(int fifth = 0; fifth <= 6; fifth++) {
+				
 				for(int fourth = 0; fourth <= 6; fourth++) {
+					
 					for(int third = 0; third <= 6; third++) {
+						
 						for(int second = 0; second <= 6; second++) {
 							
 							for(int first = 1; first <= 6; first++) {
