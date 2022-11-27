@@ -270,8 +270,10 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 					
 	/**
+	 * This is a supporting method for chooseByExpectedValues, which calculates 
+	 * expected values from the view of selected dices and then finds the version
+	 * of dices selection that will have the maximum expected value. 
 	 * 
-	 * 		
 	 * @param probabilities_map
 	 * 
 	 * 
