@@ -132,7 +132,8 @@ public class AutoPlayer implements YahtzeeConstants {
 	/**
 	 * 
 	 * 
-	 * @param tries_remained
+	 * @param tries_remained - integer value, which describes the number of remained tries
+	 * 						 for computer.
 	 * 
 	 * 
 	 * @return
