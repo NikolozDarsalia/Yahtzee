@@ -130,7 +130,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	
 	
 	/**
-	 * 
+	 * If the answer of isLower method is not -1, this method will be ran. 
 	 * 
 	 * 
 	 * @param category
