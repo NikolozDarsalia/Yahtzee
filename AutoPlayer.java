@@ -82,7 +82,7 @@ public class AutoPlayer implements YahtzeeConstants {
 	 * It checks the empty cells of score_board for computer's categories, to
 	 * show which categories are available.
 	 * 
-	 * @return
+	 * @return ArrayList of integers - list of available categories.
 	 * 
 	 */
 	private ArrayList <Integer>  remainedCategories() {
