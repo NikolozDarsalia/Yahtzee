@@ -102,7 +102,8 @@ public class Yahtzee extends GraphicsProgram implements YahtzeeConstants {
 	 * 
 	 * 
 	 * @param against_computer
-	 * 			integer value.
+	 * 			integer value - if it equals to 1, computer will be an opponent
+	 * 						of player.
 	 */
 	private void playGame(int against_computer) {
 		score_board = new int[nPlayers][N_CATEGORIES];
